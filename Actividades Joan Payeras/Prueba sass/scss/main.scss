@@ -1,3 +1,5 @@
+@use "sass:math";
+
 //Actividad 1
 
 $color-primari :  blue;
@@ -75,8 +77,6 @@ $radi-vora : 8px;
 $font-base : 16px;
 
 $ratio-modular : 1.25;
-
-@use "sass:math";
 
 $color-text: #333333;
 $color-titol: #111111;
