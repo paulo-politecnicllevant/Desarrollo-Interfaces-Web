@@ -1,3 +1,37 @@
+.targeta--primaria {
+  background-color: #3333ff;
+  color: #000066;
+  border-color: #0000cc;
+}
+.targeta--primaria button {
+  color: blue;
+}
+.targeta--primaria button:hover {
+  color: #0000cc;
+}
 
+.targeta--secundaria {
+  background-color: #b3ffb3;
+  color: black;
+  border-color: #004d00;
+}
+.targeta--secundaria button {
+  color: green;
+}
+.targeta--secundaria button:hover {
+  color: #004d00;
+}
+
+.targeta--alerta {
+  background-color: #ff3333;
+  color: #660000;
+  border-color: #cc0000;
+}
+.targeta--alerta button {
+  color: red;
+}
+.targeta--alerta button:hover {
+  color: #cc0000;
+}
 
 /*# sourceMappingURL=main.css.map */

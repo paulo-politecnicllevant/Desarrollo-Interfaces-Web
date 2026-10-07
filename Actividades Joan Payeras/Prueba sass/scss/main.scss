@@ -1,3 +1,45 @@
 $color-primari :  blue;
 $color-secundari : green;
 $color-alerta : red;
+
+.targeta--primaria{
+    background-color : lighten($color-primari, 10%);
+    color: darken($color-primari, 30%);
+    border-color: darken($color-primari, 10%);
+    
+    button{
+        color : $color-primari;
+    }
+
+    button:hover{
+        color : darken($color: $color-primari, $amount: 10)
+    }
+}
+
+.targeta--secundaria{
+    background-color : lighten($color-secundari, 60%);
+    color: darken($color-secundari, 30%);
+    border-color: darken($color-secundari, 10%);
+    
+    button{
+        color : $color-secundari;
+    }
+
+    button:hover{
+        color : darken($color: $color-secundari, $amount: 10)
+    }
+}
+
+.targeta--alerta{
+    background-color : lighten($color-alerta, 10%);
+    color: darken($color-alerta, 30%);
+    border-color: darken($color-alerta, 10%);
+    
+    button{
+        color : $color-alerta;
+    }
+
+    button:hover{
+        color : darken($color: $color-alerta, $amount: 10)
+    }
+}
