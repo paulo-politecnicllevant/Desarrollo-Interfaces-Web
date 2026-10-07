@@ -78,11 +78,16 @@ $ratio-modular : 1.25;
 
 @use "sass:math";
 
+$color-text: #333333;
+$color-titol: #111111;
+$color-subtitol: lighten($color-titol, 15%);
+
 .titol-principal {
     $mida : $font-base * $ratio-modular * $ratio-modular * $ratio-modular;
     font-size: $mida;
     line-height: 1.2;
     margin-bottom: math.div($mida, 2);
+    color: $color-titol;
 }
 
 .subtitol {
@@ -90,6 +95,7 @@ $ratio-modular : 1.25;
     font-size: $mida;
     line-height: 1.3;
     margin-bottom: math.div($mida, 2);
+    color: $color-subtitol;
 }
 
 .subsubtitol {
@@ -97,6 +103,7 @@ $ratio-modular : 1.25;
     font-size: $mida;
     line-height: 1.4;
     margin-bottom: math.div($mida, 2);
+    color: $color-subtitol;
 }
 
 .text-normal {
@@ -104,6 +111,7 @@ $ratio-modular : 1.25;
     font-size: $mida;
     line-height: 1.6;
     margin-bottom: math.div($mida, 2);
+    $color-text: #333333;
 }
 
 .text-petita {
@@ -111,4 +119,5 @@ $ratio-modular : 1.25;
     font-size: $mida;
     line-height: 1.6;
     margin-bottom: math.div($mida, 2);
+    $color-text: #333333;
 }
