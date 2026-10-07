@@ -4,10 +4,12 @@
   border: 2px solid #0000cc;
   padding: 16px;
   margin-bottom: 24px;
+  border-radius: 8px;
 }
 .targeta--primaria button {
   color: blue;
   padding: 8px;
+  border-radius: 8px;
 }
 .targeta--primaria button:hover {
   color: #0000cc;
@@ -19,10 +21,12 @@
   border: 2px solid #004d00;
   padding: 16px;
   margin-bottom: 24px;
+  border-radius: 8px;
 }
 .targeta--secundaria button {
   color: green;
   padding: 8px;
+  border-radius: 8px;
 }
 .targeta--secundaria button:hover {
   color: #004d00;
@@ -34,10 +38,12 @@
   border: 2px solid #cc0000;
   padding: 16px;
   margin-bottom: 24px;
+  border-radius: 8px;
 }
 .targeta--alerta button {
   color: red;
   padding: 8px;
+  border-radius: 8px;
 }
 .targeta--alerta button:hover {
   color: #cc0000;

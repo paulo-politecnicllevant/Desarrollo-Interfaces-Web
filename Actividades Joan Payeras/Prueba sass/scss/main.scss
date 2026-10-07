@@ -6,16 +6,20 @@ $espaiat-petit : 8px;
 $espaiat-mitjana : 16px;
 $espaiat-gran : 24px;
 
+$radi-vora : 8px;
+
 .targeta--primaria{
     background-color : lighten($color-primari, 10);
     color: darken($color-primari, 30);
     border:2px solid darken($color-primari, 10);
     padding: $espaiat-mitjana;
     margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
     
     button{
         color : $color-primari;
         padding: $espaiat-petit;
+        border-radius: $radi-vora;
     }
 
     button:hover{
@@ -29,10 +33,12 @@ $espaiat-gran : 24px;
     border: 2px solid darken($color-secundari, 10);
     padding: $espaiat-mitjana;
     margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
     
     button{
         color : $color-secundari;
         padding: $espaiat-petit;
+        border-radius: $radi-vora;
     }
 
     button:hover{
@@ -46,10 +52,12 @@ $espaiat-gran : 24px;
     border:2px solid darken($color-alerta, 10);
     padding: $espaiat-mitjana;
     margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
 
     button{
         color : $color-alerta;
         padding: $espaiat-petit;
+        border-radius: $radi-vora;
     }
 
     button:hover{
