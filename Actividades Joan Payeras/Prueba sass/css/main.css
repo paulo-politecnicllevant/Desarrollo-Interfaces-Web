@@ -13,6 +13,7 @@
 }
 .targeta--primaria button:hover {
   color: #0000cc;
+  transition: 0.3s ease;
 }
 
 .targeta--secundaria {
@@ -30,6 +31,7 @@
 }
 .targeta--secundaria button:hover {
   color: #004d00;
+  transition: 0.3s ease;
 }
 
 .targeta--alerta {
@@ -47,6 +49,7 @@
 }
 .targeta--alerta button:hover {
   color: #cc0000;
+  transition: 0.3s ease;
 }
 
 /*# sourceMappingURL=main.css.map */

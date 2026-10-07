@@ -23,7 +23,8 @@ $radi-vora : 8px;
     }
 
     button:hover{
-        color : darken($color: $color-primari, $amount: 10)
+        color : darken($color: $color-primari, $amount: 10);
+        transition: 0.3s ease;
     }
 }
 
@@ -42,7 +43,8 @@ $radi-vora : 8px;
     }
 
     button:hover{
-        color : darken($color: $color-secundari, $amount: 10)
+        color : darken($color: $color-secundari, $amount: 10);
+        transition: 0.3s ease;
     }
 }
 
@@ -61,6 +63,7 @@ $radi-vora : 8px;
     }
 
     button:hover{
-        color : darken($color: $color-alerta, $amount: 10)
+        color : darken($color: $color-alerta, $amount: 10);
+        transition: 0.3s ease;
     }
 }
