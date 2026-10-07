@@ -1,55 +1,17 @@
-.targeta--primaria {
-  background-color: #3333ff;
-  color: #000066;
-  border: 2px solid #0000cc;
-  padding: 16px;
-  margin-bottom: 24px;
-  border-radius: 8px;
-}
-.targeta--primaria button {
-  color: blue;
-  padding: 8px;
-  border-radius: 8px;
-}
-.targeta--primaria button:hover {
-  color: #0000cc;
-  transition: 0.3s ease;
-}
+/* Error: @use rules must be written before any other rules.
+ *    ,
+ * 79 | @use "sass:math";
+ *    | ^^^^^^^^^^^^^^^^
+ *    '
+ *   scss/main.scss 79:1  root stylesheet */
 
-.targeta--secundaria {
-  background-color: #b3ffb3;
-  color: black;
-  border: 2px solid #004d00;
-  padding: 16px;
-  margin-bottom: 24px;
-  border-radius: 8px;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: @use rules must be written before any other rules.\a    \2577 \a 79 \2502  @use "sass:math";\a    \2502  ^^^^^^^^^^^^^^^^\a    \2575 \a   scss/main.scss 79:1  root stylesheet';
 }
-.targeta--secundaria button {
-  color: green;
-  padding: 8px;
-  border-radius: 8px;
-}
-.targeta--secundaria button:hover {
-  color: #004d00;
-  transition: 0.3s ease;
-}
-
-.targeta--alerta {
-  background-color: #ff3333;
-  color: #660000;
-  border: 2px solid #cc0000;
-  padding: 16px;
-  margin-bottom: 24px;
-  border-radius: 8px;
-}
-.targeta--alerta button {
-  color: red;
-  padding: 8px;
-  border-radius: 8px;
-}
-.targeta--alerta button:hover {
-  color: #cc0000;
-  transition: 0.3s ease;
-}
-
-/*# sourceMappingURL=main.css.map */

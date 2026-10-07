@@ -75,3 +75,25 @@ $radi-vora : 8px;
 $font-base : 16px;
 
 $ratio-modular : 1.25;
+
+@use "sass:math";
+
+.titol-principal {
+    font-size: $font-base * $ratio-modular * $ratio-modular * $ratio-modular;
+}
+
+.subtitol {
+    font-size: $font-base * $ratio-modular * $ratio-modular;
+}
+
+.subsubtitol {
+    font-size: $font-base * $ratio-modular;
+}
+
+.text-normal {
+    font-size: $font-base;
+}
+
+.text-petita {
+    font-size: math.div($font-base, $ratio-modular);
+}
