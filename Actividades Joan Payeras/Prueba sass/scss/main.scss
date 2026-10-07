@@ -80,20 +80,25 @@ $ratio-modular : 1.25;
 
 .titol-principal {
     font-size: $font-base * $ratio-modular * $ratio-modular * $ratio-modular;
+    line-height: 1.2;
 }
 
 .subtitol {
     font-size: $font-base * $ratio-modular * $ratio-modular;
+    line-height: 1.3;
 }
 
 .subsubtitol {
     font-size: $font-base * $ratio-modular;
+    line-height: 1.4;
 }
 
 .text-normal {
     font-size: $font-base;
+    line-height: 1.6;
 }
 
 .text-petita {
     font-size: math.div($font-base, $ratio-modular);
+    line-height: 1.6;
 }
