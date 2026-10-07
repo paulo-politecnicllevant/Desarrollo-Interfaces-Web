@@ -1,10 +1,13 @@
 .targeta--primaria {
   background-color: #3333ff;
   color: #000066;
-  border-color: #0000cc;
+  border: 2px solid #0000cc;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 .targeta--primaria button {
   color: blue;
+  padding: 8px;
 }
 .targeta--primaria button:hover {
   color: #0000cc;
@@ -13,10 +16,13 @@
 .targeta--secundaria {
   background-color: #b3ffb3;
   color: black;
-  border-color: #004d00;
+  border: 2px solid #004d00;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 .targeta--secundaria button {
   color: green;
+  padding: 8px;
 }
 .targeta--secundaria button:hover {
   color: #004d00;
@@ -25,10 +31,13 @@
 .targeta--alerta {
   background-color: #ff3333;
   color: #660000;
-  border-color: #cc0000;
+  border: 2px solid #cc0000;
+  padding: 16px;
+  margin-bottom: 24px;
 }
 .targeta--alerta button {
   color: red;
+  padding: 8px;
 }
 .targeta--alerta button:hover {
   color: #cc0000;

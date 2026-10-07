@@ -2,13 +2,20 @@ $color-primari :  blue;
 $color-secundari : green;
 $color-alerta : red;
 
+$espaiat-petit : 8px;
+$espaiat-mitjana : 16px;
+$espaiat-gran : 24px;
+
 .targeta--primaria{
-    background-color : lighten($color-primari, 10%);
-    color: darken($color-primari, 30%);
-    border-color: darken($color-primari, 10%);
+    background-color : lighten($color-primari, 10);
+    color: darken($color-primari, 30);
+    border:2px solid darken($color-primari, 10);
+    padding: $espaiat-mitjana;
+    margin-bottom: $espaiat-gran;
     
     button{
         color : $color-primari;
+        padding: $espaiat-petit;
     }
 
     button:hover{
@@ -17,12 +24,15 @@ $color-alerta : red;
 }
 
 .targeta--secundaria{
-    background-color : lighten($color-secundari, 60%);
-    color: darken($color-secundari, 30%);
-    border-color: darken($color-secundari, 10%);
+    background-color : lighten($color-secundari, 60);
+    color: darken($color-secundari, 30);
+    border: 2px solid darken($color-secundari, 10);
+    padding: $espaiat-mitjana;
+    margin-bottom: $espaiat-gran;
     
     button{
         color : $color-secundari;
+        padding: $espaiat-petit;
     }
 
     button:hover{
@@ -31,12 +41,15 @@ $color-alerta : red;
 }
 
 .targeta--alerta{
-    background-color : lighten($color-alerta, 10%);
-    color: darken($color-alerta, 30%);
-    border-color: darken($color-alerta, 10%);
-    
+    background-color : lighten($color-alerta, 10);
+    color: darken($color-alerta, 30);
+    border:2px solid darken($color-alerta, 10);
+    padding: $espaiat-mitjana;
+    margin-bottom: $espaiat-gran;
+
     button{
         color : $color-alerta;
+        padding: $espaiat-petit;
     }
 
     button:hover{
