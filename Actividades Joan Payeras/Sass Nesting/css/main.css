@@ -24,5 +24,13 @@
   padding: 12px 20px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.menu-principal__enllac:hover {
+  background-color: rgb(29.6218487395%, 49.7899159664%, 49.7899159664%);
+}
+.menu-principal__enllac:focus {
+  outline: 2px solid;
+  color: darkorange;
+  outline-offset: 2px;
+}
 
 /*# sourceMappingURL=main.css.map */
