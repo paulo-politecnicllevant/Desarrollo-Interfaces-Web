@@ -2,5 +2,11 @@
   background-color: darkslategray;
   padding: 0 20px;
 }
+.menu-principal .menu-principal__llista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
 
 /*# sourceMappingURL=main.css.map */

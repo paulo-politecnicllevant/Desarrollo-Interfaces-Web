@@ -8,4 +8,11 @@ $padding-enllac: 12px 20px;
 .menu-principal{
     background-color: $color-fons-menu;
     padding: 0 20px;
+
+    .menu-principal__llista{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    }
 }
