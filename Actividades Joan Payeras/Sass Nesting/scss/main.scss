@@ -27,4 +27,12 @@ $padding-enllac: 12px 20px;
     &:last-child{
         border-radius: 0 4px 4px 0;
     }
+
+    &__enllac{
+        display: block;
+        color: $color-text-menu;
+        text-decoration: none;
+        padding: $padding-enllac;
+        transition: background-color 0.3s ease, color 0.3s ease
+    }
 }
