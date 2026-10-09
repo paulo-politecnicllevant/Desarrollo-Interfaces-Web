@@ -9,10 +9,22 @@ $padding-enllac: 12px 20px;
     background-color: $color-fons-menu;
     padding: 0 20px;
 
-    .menu-principal__llista{
+    &__llista{
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    }
+
+    &__item{
+        margin-right: $espaiat-item;
+    }
+
+    &:first-child{
+        border-radius: 4px 0 0 4px;
+    }
+
+    &:last-child{
+        border-radius: 0 4px 4px 0;
     }
 }

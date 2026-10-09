@@ -2,11 +2,20 @@
   background-color: darkslategray;
   padding: 0 20px;
 }
-.menu-principal .menu-principal__llista {
+.menu-principal__llista {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
+}
+.menu-principal__item {
+  margin-right: 4px;
+}
+.menu-principal:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.menu-principal:last-child {
+  border-radius: 0 4px 4px 0;
 }
 
 /*# sourceMappingURL=main.css.map */
