@@ -1,3 +1,5 @@
+//Activitat 1
+
 $color-fons-menu: darkslategray;
 $color-text-menu:white;
 $color-hover-menu: lighten($color-fons-menu, 15);
@@ -43,6 +45,108 @@ $padding-enllac: 12px 20px;
             outline: 2px solid;
             color: $color-accent-focus;
             outline-offset: 2px;
+        }
+    }
+}
+
+// Exercici 2: Targeta de perfil d'usuari amb BEM
+
+// Variables de disseny
+$radi-vora-targeta: 8px;
+$mida-avatar: 120px;
+$espaiat-petita: 8px;
+$espaiat-mitjana: 16px;
+$espaiat-gran: 24px;
+
+// Variables de color
+$color-fons-targeta: white;
+$color-nom: darkslategray;
+$color-carrec: lighten(dimgrey, 10%);
+$color-primari: dodgerblue;
+$color-administrador: tomato;
+$color-ombra: rgba(black, 0.1);
+$color-bio: #555;
+
+// Altres variables
+$amplada-contenidor: 800px;
+$amplada-targeta: 300px;
+$marge-contenidor: 40px;
+$mida-nom: 20px;
+$mida-text: 14px;
+$radi-boto: 4px;
+$gruix-vora-administrador: 4px;
+$durada-transicio: 0.3s;
+$efecte-transicio: ease;
+
+.contenidor {
+    max-width: $amplada-contenidor;
+    margin: $marge-contenidor auto;
+    padding: 0 $espaiat-gran;
+    display: flex;
+    gap: $espaiat-gran;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.perfil {
+    background-color: $color-fons-targeta;
+    border-radius: $radi-vora-targeta;
+    padding: $espaiat-gran;
+    text-align: center;
+    box-shadow: 0 4px 6px $color-ombra;
+    width: $amplada-targeta;
+
+    &__avatar {
+        width: $mida-avatar;
+        height: $mida-avatar;
+        border-radius: 50%;
+        margin-bottom: $espaiat-mitjana;
+        object-fit: cover;
+    }
+
+    &__nom {
+        margin-bottom: $espaiat-petita;
+        color: $color-nom;
+        font-size: $mida-nom;
+    }
+
+    &__carrec {
+        color: $color-carrec;
+        font-size: $mida-text;
+        margin-bottom: $espaiat-mitjana;
+    }
+
+    &__bio {
+        font-size: $mida-text;
+        color: $color-bio;
+        margin-bottom: $espaiat-mitjana;
+        line-height: 1.5;
+    }
+
+    &__boto {
+        background-color: $color-primari;
+        color: white;
+        border: none;
+        padding: $espaiat-petita $espaiat-mitjana;
+        border-radius: $radi-boto;
+        cursor: pointer;
+        font-size: $mida-text;
+        transition: background-color $durada-transicio $efecte-transicio;
+
+        &:hover {
+            background-color: darken($color-primari, 10%);
+        }
+    }
+
+    &--administrador {
+        border-top: $gruix-vora-administrador solid $color-administrador;
+
+        .perfil__boto {
+            background-color: $color-administrador;
+
+            &:hover {
+                background-color: darken($color-administrador, 10%);
+            }
         }
     }
 }

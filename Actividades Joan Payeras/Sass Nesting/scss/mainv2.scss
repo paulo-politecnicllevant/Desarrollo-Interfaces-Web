@@ -1,0 +1,70 @@
+//Colors
+$color-fons-menu: darkslategray;
+$color-text-menu: white;
+$color-hover-menu: lighten($color-fons-menu, 15%);
+$color-accent-focus: darkorange;
+
+//Espaiats
+$espaiat-item: 4px;
+$padding-menu-horitzontal: 20px;
+$padding-enllac-vertical: 12px;
+$padding-enllac-horitzontal: 20px;
+
+//Vores
+$radi-vora: 4px;
+$gruix-outline: 2px;
+$offset-outline: 2px;
+
+//Transicions
+$durada-transicio: 0.3s;
+$efecte-transicio: ease;
+
+//Altres valors
+$estil-outline: solid;
+$estil-llista: none;
+$decoracio-enllac: none;
+$display-llista: flex;
+$display-enllac: block;
+
+.menu-principal {
+    background-color: $color-fons-menu;
+    padding: 0 $padding-menu-horitzontal;
+
+    &__llista {
+        list-style: $estil-llista;
+        padding: 0;
+        margin: 0;
+        display: $display-llista;
+    }
+
+    &__item {
+        margin-right: $espaiat-item;
+    }
+
+    &:first-child {
+        border-radius: $radi-vora 0 0 $radi-vora;
+    }
+
+    &:last-child {
+        border-radius: 0 $radi-vora $radi-vora 0;
+    }
+
+    &__enllac {
+        display: $display-enllac;
+        color: $color-text-menu;
+        text-decoration: $decoracio-enllac;
+        padding: $padding-enllac-vertical $padding-enllac-horitzontal;
+        transition: background-color $durada-transicio $efecte-transicio,
+                    color $durada-transicio $efecte-transicio;
+
+        &:hover {
+            background-color: $color-hover-menu;
+        }
+
+        &:focus {
+            outline: $gruix-outline $estil-outline;
+            color: $color-accent-focus;
+            outline-offset: $offset-outline;
+        }
+    }
+}

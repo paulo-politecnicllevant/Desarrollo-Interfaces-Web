@@ -1,25 +1,25 @@
 @use "sass:math";
 
-//VARIABLES GENERALS
+//VARIABLES GENERALES
 
-//Activitat 1: Colors
+//Actividad 1: Colores
 $color-primari: blue;
 $color-secundari: green;
 $color-alerta: red;
 
-//Activitat 1: Espaiats
+//Actividad 1: Espacios
 $espaiat-petit: 8px;
 $espaiat-mitja: 16px;
 $espaiat-gran: 24px;
 
-//Activitat 1: Vores i transicions
+//Actividad 1: Bordes y transiciones
 $radi-vora: 8px;
 $gruix-vora: 2px;
 $estil-vora: solid;
 $durada-transicio: 0.3s;
 $efecte-transicio: ease;
 
-//Activitat 1: Modificacions dels colors
+//Actividad 1: Modificaciones de los colores
 $lluminositat-fons-primari: 10%;
 $lluminositat-fons-secundari: 60%;
 $lluminositat-fons-alerta: 10%;
@@ -28,27 +28,27 @@ $enfosquiment-text: 30%;
 $enfosquiment-vora: 10%;
 $enfosquiment-hover: 10%;
 
-//Activitat 2: Tipografia
+//Actividad 2: Tipografia
 $font-base: 16px;
 $ratio-modular: 1.25;
 
-//Activitat 2: Colors
+//Actividad 2: Colores
 $color-text: #333333;
 $color-titol: #111111;
 $color-subtitol: lighten($color-titol, 15%);
 
-//Activitat 2: Alçades de línia
+//Actividad 2: Medidas de linea
 $interlineat-titol: 1.2;
 $interlineat-subtitol: 1.3;
 $interlineat-subsubtitol: 1.4;
 $interlineat-text: 1.6;
 
-//Activitat 2: Càlculs de mides
+//Actividad 2: Cálculos de medida
 $nivell-titol: 3;
 $nivell-subtitol: 2;
 $divisor-marge-inferior: 2;
 
-//ACTIVITAT 1: TARGETES
+//Actividad 1: Tarjetas
 
 .targeta--primaria {
     background-color: lighten($color-primari, $lluminositat-fons-primari);
@@ -110,7 +110,7 @@ $divisor-marge-inferior: 2;
     }
 }
 
-//ACTIVITAT 2: TIPOGRAFIA
+//Actividad 2: TIPOGRAFIA
 
 .titol-principal {
     $mida: $font-base * $ratio-modular * $ratio-modular * $ratio-modular;

@@ -1,0 +1,36 @@
+.menu-principal {
+  background-color: darkslategray;
+  padding: 0 20px;
+}
+.menu-principal__llista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.menu-principal__item {
+  margin-right: 4px;
+}
+.menu-principal:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.menu-principal:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.menu-principal__enllac {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.menu-principal__enllac:hover {
+  background-color: rgb(29.6218487395%, 49.7899159664%, 49.7899159664%);
+}
+.menu-principal__enllac:focus {
+  outline: 2px solid;
+  color: darkorange;
+  outline-offset: 2px;
+}
+
+/*# sourceMappingURL=mainv2.css.map */
