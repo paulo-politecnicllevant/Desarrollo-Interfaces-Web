@@ -49,9 +49,9 @@ $padding-enllac: 12px 20px;
     }
 }
 
-// Exercici 2: Targeta de perfil d'usuari amb BEM
+// Exercici 2:
 
-// Variables de disseny
+// Variables de diseño
 $radi-vora-targeta: 8px;
 $mida-avatar: 120px;
 $espaiat-petita: 8px;
@@ -67,7 +67,7 @@ $color-administrador: tomato;
 $color-ombra: rgba(black, 0.1);
 $color-bio: #555;
 
-// Altres variables
+// Otras variables
 $amplada-contenidor: 800px;
 $amplada-targeta: 300px;
 $marge-contenidor: 40px;
@@ -146,6 +146,61 @@ $efecte-transicio: ease;
 
             &:hover {
                 background-color: darken($color-administrador, 10%);
+            }
+        }
+    }
+}
+
+//Ejercicio 3:
+
+$color-exit: mediumseagreen;
+$color-text: dimgray;
+$color-titol: darkslategray;
+$espaiat-item: 12px;
+$padding-left-icona: 30px;
+$espaiat-gran: 24px;
+
+.plataforma {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    &__titol {
+        margin-bottom: $espaiat-gran;
+        color: $color-titol;
+        font-size: 24px;
+    }
+
+    &__llista {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: $padding-left-icona;
+        margin-bottom: $espaiat-item;
+        color: $color-text;
+        line-height: 1.6;
+        transition: color 0.2s ease;
+
+        &::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: $color-exit;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.2s ease;
+        }
+
+        &:hover {
+            color: $color-exit;
+
+            &::before {
+                transform: scale(1.2);
             }
         }
     }
