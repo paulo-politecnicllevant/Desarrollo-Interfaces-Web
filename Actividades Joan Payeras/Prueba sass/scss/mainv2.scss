@@ -1,0 +1,157 @@
+@use "sass:math";
+
+//VARIABLES GENERALS
+
+//Activitat 1: Colors
+$color-primari: blue;
+$color-secundari: green;
+$color-alerta: red;
+
+//Activitat 1: Espaiats
+$espaiat-petit: 8px;
+$espaiat-mitja: 16px;
+$espaiat-gran: 24px;
+
+//Activitat 1: Vores i transicions
+$radi-vora: 8px;
+$gruix-vora: 2px;
+$estil-vora: solid;
+$durada-transicio: 0.3s;
+$efecte-transicio: ease;
+
+//Activitat 1: Modificacions dels colors
+$lluminositat-fons-primari: 10%;
+$lluminositat-fons-secundari: 60%;
+$lluminositat-fons-alerta: 10%;
+
+$enfosquiment-text: 30%;
+$enfosquiment-vora: 10%;
+$enfosquiment-hover: 10%;
+
+//Activitat 2: Tipografia
+$font-base: 16px;
+$ratio-modular: 1.25;
+
+//Activitat 2: Colors
+$color-text: #333333;
+$color-titol: #111111;
+$color-subtitol: lighten($color-titol, 15%);
+
+//Activitat 2: Alçades de línia
+$interlineat-titol: 1.2;
+$interlineat-subtitol: 1.3;
+$interlineat-subsubtitol: 1.4;
+$interlineat-text: 1.6;
+
+//Activitat 2: Càlculs de mides
+$nivell-titol: 3;
+$nivell-subtitol: 2;
+$divisor-marge-inferior: 2;
+
+//ACTIVITAT 1: TARGETES
+
+.targeta--primaria {
+    background-color: lighten($color-primari, $lluminositat-fons-primari);
+    color: darken($color-primari, $enfosquiment-text);
+    border: $gruix-vora $estil-vora darken($color-primari, $enfosquiment-vora);
+    padding: $espaiat-mitja;
+    margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
+
+    button {
+        color: $color-primari;
+        padding: $espaiat-petit;
+        border-radius: $radi-vora;
+    }
+
+    button:hover {
+        color: darken($color: $color-primari, $amount: $enfosquiment-hover);
+        transition: $durada-transicio $efecte-transicio;
+    }
+}
+
+.targeta--secundaria {
+    background-color: lighten($color-secundari, $lluminositat-fons-secundari);
+    color: darken($color-secundari, $enfosquiment-text);
+    border: $gruix-vora $estil-vora darken($color-secundari, $enfosquiment-vora);
+    padding: $espaiat-mitja;
+    margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
+
+    button {
+        color: $color-secundari;
+        padding: $espaiat-petit;
+        border-radius: $radi-vora;
+    }
+
+    button:hover {
+        color: darken($color: $color-secundari, $amount: $enfosquiment-hover);
+        transition: $durada-transicio $efecte-transicio;
+    }
+}
+
+.targeta--alerta {
+    background-color: lighten($color-alerta, $lluminositat-fons-alerta);
+    color: darken($color-alerta, $enfosquiment-text);
+    border: $gruix-vora $estil-vora darken($color-alerta, $enfosquiment-vora);
+    padding: $espaiat-mitja;
+    margin-bottom: $espaiat-gran;
+    border-radius: $radi-vora;
+
+    button {
+        color: $color-alerta;
+        padding: $espaiat-petit;
+        border-radius: $radi-vora;
+    }
+
+    button:hover {
+        color: darken($color: $color-alerta, $amount: $enfosquiment-hover);
+        transition: $durada-transicio $efecte-transicio;
+    }
+}
+
+//ACTIVITAT 2: TIPOGRAFIA
+
+.titol-principal {
+    $mida: $font-base * $ratio-modular * $ratio-modular * $ratio-modular;
+
+    font-size: $mida;
+    line-height: $interlineat-titol;
+    margin-bottom: math.div($mida, $divisor-marge-inferior);
+    color: $color-titol;
+}
+
+.subtitol {
+    $mida: $font-base * $ratio-modular * $ratio-modular;
+
+    font-size: $mida;
+    line-height: $interlineat-subtitol;
+    margin-bottom: math.div($mida, $divisor-marge-inferior);
+    color: $color-subtitol;
+}
+
+.subsubtitol {
+    $mida: $font-base * $ratio-modular;
+
+    font-size: $mida;
+    line-height: $interlineat-subsubtitol;
+    margin-bottom: math.div($mida, $divisor-marge-inferior);
+    color: $color-subtitol;
+}
+
+.text-normal {
+    $mida: $font-base;
+
+    font-size: $mida;
+    line-height: $interlineat-text;
+    margin-bottom: math.div($mida, $divisor-marge-inferior);
+    $color-text: #333333;
+}
+
+.text-petita {
+    $mida: math.div($font-base, $ratio-modular);
+    font-size: $mida;
+    line-height: $interlineat-text;
+    margin-bottom: math.div($mida, $divisor-marge-inferior);
+    $color-text: #333333;
+}
