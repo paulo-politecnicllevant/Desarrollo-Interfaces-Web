@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass --watch scss/main.scss css/main.css",
-    "sass:build": "sass scss/main.scss css/main.css --style=compressed --no-source-map",
-    "sass:dev": "sass --watch scss/main.scss css/main.css --style=expanded --source-map",
-    "sass:v2": "sass --watch scss/mainv2.scss css/mainv2.css --style=expanded"
+    "sass:watch": "sass --watch scss/styleConjunt.scss css/styleConjunt.css",
+    "sass:build": "sass scss/styleConjunt.scss css/styleConjunt.css --style=compressed --no-source-map",
+    "sass:dev": "sass --watch scss/styleConjunt.scss css/styleConjunt.css --style=expanded --source-map"
   },
   "keywords": [],
   "author": "",

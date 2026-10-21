@@ -1,0 +1,254 @@
+//ACTIVIDAD 1:
+
+//Variables de color
+$color-fons-menu: darkslategray;
+$color-text-menu: white;
+$color-hover-menu: lighten($color-fons-menu, 15);
+$color-accent-focus: darkorange;
+
+//Variables de espaciado
+$espaiat-item: 4px;
+$padding-enllac: 12px 20px;
+$padding-menu: 20px;
+
+//Variables de bordes y transiciones
+$radi-vora: 4px;
+$gruix-vora: 2px;
+$offset-outline: 2px;
+$durada-transicio: 0.3s;
+$efecte-transicio: ease;
+
+//Otras variables
+$estil-llista: none;
+$display-llista: flex;
+$display-enllac: block;
+$decoracio-enllac: none;
+$outline-estil: solid;
+
+.menu-principal {
+    background-color: $color-fons-menu;
+    padding: 0 $padding-menu;
+
+    &__llista {
+        list-style: $estil-llista;
+        padding: 0;
+        margin: 0;
+        display: $display-llista;
+    }
+
+    &__item {
+        margin-right: $espaiat-item;
+    }
+
+    &:first-child {
+        border-radius: $radi-vora 0 0 $radi-vora;
+    }
+
+    &:last-child {
+        border-radius: 0 $radi-vora $radi-vora 0;
+    }
+
+    &__enllac {
+        display: $display-enllac;
+        color: $color-text-menu;
+        text-decoration: $decoracio-enllac;
+        padding: $padding-enllac;
+        transition: background-color $durada-transicio $efecte-transicio,
+                    color $durada-transicio $efecte-transicio;
+
+        &:hover {
+            background-color: $color-hover-menu;
+        }
+
+        &:focus {
+            outline: $gruix-vora $outline-estil;
+            color: $color-accent-focus;
+            outline-offset: $offset-outline;
+        }
+    }
+}
+
+
+//EJERCICIO 2:
+
+//Variables de diseño
+$radi-vora-targeta: 8px;
+$mida-avatar: 120px;
+$espaiat-petita: 8px;
+$espaiat-mitjana: 16px;
+$espaiat-gran: 24px;
+
+//Variables de color
+$color-fons-targeta: white;
+$color-nom: darkslategray;
+$color-carrec: lighten(dimgrey, 10%);
+$color-primari: dodgerblue;
+$color-administrador: tomato;
+$color-ombra: rgba(black, 0.1);
+$color-bio: #555;
+
+//Otras variables
+$amplada-contenidor: 800px;
+$amplada-targeta: 300px;
+$marge-contenidor: 40px;
+$mida-nom: 20px;
+$mida-text: 14px;
+$radi-boto: 4px;
+$gruix-vora-administrador: 4px;
+$gruix-ombra: 4px;
+$desplacament-ombra: 6px;
+$radi-avatar: 50%;
+$estil-vora: solid;
+$estil-boto: none;
+$alineacio-text: center;
+$ajust-contenidor: wrap;
+$alineacio-contenidor: center;
+$object-fit-avatar: cover;
+$cursor-boto: pointer;
+$line-height-bio: 1.5;
+$enfosquiment-hover: 10%;
+
+.contenidor {
+    max-width: $amplada-contenidor;
+    margin: $marge-contenidor auto;
+    padding: 0 $espaiat-gran;
+    display: flex;
+    gap: $espaiat-gran;
+    flex-wrap: $ajust-contenidor;
+    justify-content: $alineacio-contenidor;
+}
+
+.perfil {
+    background-color: $color-fons-targeta;
+    border-radius: $radi-vora-targeta;
+    padding: $espaiat-gran;
+    text-align: $alineacio-text;
+    box-shadow: 0 $gruix-ombra $desplacament-ombra $color-ombra;
+    width: $amplada-targeta;
+
+    &__avatar {
+        width: $mida-avatar;
+        height: $mida-avatar;
+        border-radius: $radi-avatar;
+        margin-bottom: $espaiat-mitjana;
+        object-fit: $object-fit-avatar;
+    }
+
+    &__nom {
+        margin-bottom: $espaiat-petita;
+        color: $color-nom;
+        font-size: $mida-nom;
+    }
+
+    &__carrec {
+        color: $color-carrec;
+        font-size: $mida-text;
+        margin-bottom: $espaiat-mitjana;
+    }
+
+    &__bio {
+        font-size: $mida-text;
+        color: $color-bio;
+        margin-bottom: $espaiat-mitjana;
+        line-height: $line-height-bio;
+    }
+
+    &__boto {
+        background-color: $color-primari;
+        color: white;
+        border: $estil-boto;
+        padding: $espaiat-petita $espaiat-mitjana;
+        border-radius: $radi-boto;
+        cursor: $cursor-boto;
+        font-size: $mida-text;
+        transition: background-color $durada-transicio $efecte-transicio;
+
+        &:hover {
+            background-color: darken($color-primari, $enfosquiment-hover);
+        }
+    }
+
+    &--administrador {
+        border-top: $gruix-vora-administrador $estil-vora $color-administrador;
+
+        .perfil__boto {
+            background-color: $color-administrador;
+
+            &:hover {
+                background-color: darken($color-administrador, $enfosquiment-hover);
+            }
+        }
+    }
+}
+
+
+//EJERCICIO 3:
+
+//Variables de color
+$color-exit: mediumseagreen;
+$color-text: dimgray;
+$color-titol: darkslategray;
+
+//Variables de espaciado
+$espaiat-item-llista: 12px;
+$padding-left-icona: 30px;
+
+//Otras variables
+$amplada-plataforma: 600px;
+$padding-plataforma: 20px;
+$mida-titol: 24px;
+$line-height-item: 1.6;
+$durada-transicio-icona: 0.2s;
+$mida-icona: 18px;
+$escala-icona: 1.2;
+$posicio-icona: 0;
+$pes-icona: bold;
+$contingut-icona: "✓";
+$posicio-element: relative;
+$posicio-icona-absoluta: absolute;
+
+.plataforma {
+    max-width: $amplada-plataforma;
+    margin: $marge-contenidor auto;
+    padding: 0 $padding-plataforma;
+
+    &__titol {
+        margin-bottom: $espaiat-gran;
+        color: $color-titol;
+        font-size: $mida-titol;
+    }
+
+    &__llista {
+        list-style: $estil-llista;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__item {
+        position: $posicio-element;
+        padding-left: $padding-left-icona;
+        margin-bottom: $espaiat-item-llista;
+        color: $color-text;
+        line-height: $line-height-item;
+        transition: color $durada-transicio-icona $efecte-transicio;
+
+        &::before {
+            content: $contingut-icona;
+            position: $posicio-icona-absoluta;
+            left: $posicio-icona;
+            top: $posicio-icona;
+            color: $color-exit;
+            font-weight: $pes-icona;
+            font-size: $mida-icona;
+            transition: transform $durada-transicio-icona $efecte-transicio;
+        }
+
+        &:hover {
+            color: $color-exit;
+
+            &::before {
+                transform: scale($escala-icona);
+            }
+        }
+    }
+}
