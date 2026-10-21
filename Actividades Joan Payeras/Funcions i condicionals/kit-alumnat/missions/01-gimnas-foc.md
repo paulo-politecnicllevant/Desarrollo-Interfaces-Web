@@ -81,12 +81,12 @@ Després aplica'l a aquestes tres classes:
 
 ### 🔍 Autocomprovació
 
-- [ ] El terminal del watch no mostra cap error.
-- [ ] A `main.css` hi ha **exactament 3** regles que comencen per `.fitxa-`.
-- [ ] `.fitxa-vulpix` té `background-color: #fff4e6`.
-- [ ] `.fitxa-charmander` i `.fitxa-growlithe` tenen exactament les mateixes propietats.
-- [ ] Al CSS **no** apareix ni `@if`, ni `@mixin`, ni la paraula `fosc`.
-- [ ] Al laboratori, les tres primeres fitxes tenen estil.
+- [X] El terminal del watch no mostra cap error.
+- [X] A `main.css` hi ha **exactament 3** regles que comencen per `.fitxa-`.
+- [X] `.fitxa-vulpix` té `background-color: #fff4e6`.
+- [X] `.fitxa-charmander` i `.fitxa-growlithe` tenen exactament les mateixes propietats.
+- [X] Al CSS **no** apareix ni `@if`, ni `@mixin`, ni la paraula `fosc`.
+- [X] Al laboratori, les tres primeres fitxes tenen estil.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>

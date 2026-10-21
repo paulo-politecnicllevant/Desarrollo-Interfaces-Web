@@ -11,6 +11,10 @@
         background-color: #fff4e6;
         color: #333;
         border: 2px solid #f5ac78;
+    }@else{
+        background-color: #eee;
+        color: #555;
+        border: 2px dashed #999;
     }
 
 }
@@ -25,4 +29,12 @@
 
 .fitxa-growlithe{
     @include fitxa-tema('fosc')
+}
+
+.fitxa-misteri {
+  @include fitxa-tema('altre');
+}
+
+.fitxa-ponyta {
+  @include fitxa-tema('fosc');
 }
