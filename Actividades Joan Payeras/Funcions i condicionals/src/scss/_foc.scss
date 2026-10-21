@@ -1,1 +1,28 @@
 // Gimnàs de Foc — escriu aquí el mixin de la missió.
+@mixin fitxa-tema($tema){
+    padding: 1rem;
+    border-radius: 8px;
+
+    @if $tema == 'fosc'{
+        background-color: #2b2b2b;
+        color: #f5f5f5;
+        border: 2px solid #f08030;
+    }@else if $tema == 'clar'{
+        background-color: #fff4e6;
+        color: #333;
+        border: 2px solid #f5ac78;
+    }
+
+}
+
+.fitxa-charmander{
+    @include fitxa-tema('fosc')
+}
+
+.fitxa-vulpix{
+    @include fitxa-tema('clar')
+}
+
+.fitxa-growlithe{
+    @include fitxa-tema('fosc')
+}
