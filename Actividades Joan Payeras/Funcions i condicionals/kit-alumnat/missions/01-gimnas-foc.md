@@ -308,8 +308,6 @@ Respon-la a `progres.md` amb les teves paraules i aixeca la mà:
 
 > **"Quina diferència hi ha entre l'`@if` que has fet servir dins del mixin i un condicional que s'executés al navegador (com un `if` de JavaScript o la funció `if()` del CSS modern)?"**
 
-La diferencia de los if, es que en el if de sass se ejecuta en el compilador scss mientras que el de java en el navegador
-
 Pista per pensar-hi: obre `dist/css/main.css`. Hi ha cap rastre del teu `@if`? Què passaria si l'usuari canviés el tema de la pàgina *després* de carregar-la?
 
 ---

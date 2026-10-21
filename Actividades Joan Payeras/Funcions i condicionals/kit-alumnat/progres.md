@@ -3,7 +3,7 @@
 - **Nom:**
 - **Nivell:** 1
 - **XP total:** 0
-- **Medalles:** 🔥 ⬜ · 💧 ⬜ · 🌿 ⬜ · ⚡ ⬜ · 🏆 ⬜
+- **Medalles:** 🔥 ✅ · 💧 ✅ · 🌿 ⬜ · ⚡ ⬜ · 🏆 ⬜
 
 > Quan guanyis una medalla, canvia el seu ⬜ per ✅ i escriu el codi secret a la taula de medalles.
 
@@ -61,10 +61,10 @@ Escriu-les **abans** de compilar. Després escriu què ha passat de veritat.
 
 | Gimnàs | La meva resposta | Codi de medalla |
 |---|---|---|
-| 🔥 Foc | | |
-| 💧 Aigua | | |
-| 🌿 Planta | | |
-| ⚡ Elèctric | | |
+| 🔥 Foc: La diferencia de los if, es que en el if de sass se ejecuta en el compilador scss mientras que el de java en el navegador
+| 💧 Aigua: Se hace hasta 11 ya que una tabla de 12 columnas ya ocupa el 100% del ancho. Un desplazamiento del 100% dejaria la columna fuera del espacio disponible, por lo que los únicos desplazamientos útiles son los que van del 1-11
+| 🌿 Planta: 
+| ⚡ Elèctric: 
 | 🏆 Lliga | (combat final oral) | |
 
 ---
@@ -89,9 +89,9 @@ nueva condición que se ejecuta si el anterior if es false y este es true y @els
 todas las condiciones anteriores a esta sean false
 - `@function` i `@return`: Una @function es un bloque de código que puede ser reutilizado y que realiza una función específica mientras que @return indica lo que ha de devolver la función
 - `@warn`: Método que muestra un aviso por pantalla en caso de que suceda un error
-- `@for ... through` vs `@for ... to`:
-- Interpolació `#{}`:
-- `math.div` i `math.percentage`:
+- `@for ... through` vs `@for ... to`: El through incluye el último valor del bucle, mientras que el to no
+- Interpolació `#{}`: Permite poner el valor de una variable dentro de una clase
+- `math.div` i `math.percentage`: Métodos de math que, uno realiza una división, y el otro calcula un porcentage
 - Mapes `( clau: valor )`:
 - `@each`:
 - `@each` imbricat:
