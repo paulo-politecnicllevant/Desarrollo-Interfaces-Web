@@ -1,4 +1,9 @@
+@use 'sass:color'; 
+
 // Gimnàs de Foc — escriu aquí el mixin de la missió.
+/*=============================================
+ACTIVIDAD 1.1
+*=============================================*/
 @mixin fitxa-tema($tema){
     padding: 1rem;
     border-radius: 8px;
@@ -31,10 +36,39 @@
     @include fitxa-tema('fosc')
 }
 
+/*=============================================
+ACTIVIDAD 1.2
+*=============================================*/
 .fitxa-misteri {
   @include fitxa-tema('altre');
 }
 
 .fitxa-ponyta {
   @include fitxa-tema('fosc');
+}
+
+/*=============================================
+ACTIVIDAD 1.3
+*=============================================*/
+@function contrast-text($fons){
+    @if color.channel($fons, 'lightness', $space: hsl) > 50%{
+        @return #333;
+    }@else{
+        @return #fff;
+    }
+}
+
+.xapa-charmander{
+    background-color: #f08030;
+    color: contrast-text(#f08030)
+}
+
+.xapa-magmar{
+    background-color: #7a1f00;
+    color: contrast-text(#7a1f00)
+}
+
+.xapa-vulpix{
+    background-color: #ffe0b3;
+    color: contrast-text(#ffe0b3)
 }
