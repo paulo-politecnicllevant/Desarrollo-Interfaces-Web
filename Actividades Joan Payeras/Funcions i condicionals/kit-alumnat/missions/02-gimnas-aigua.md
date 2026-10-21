@@ -171,9 +171,9 @@ Genera **`.z-1`** fins a **`.z-4`**, amb un `z-index` que sigui un múltiple de 
 
 ### 🔍 Autocomprovació
 
-- [ ] Hi ha exactament 4 classes `.z-`.
-- [ ] `.z-1` → `z-index: 100` i `.z-4` → `z-index: 400`.
-- [ ] El valor és un número sense unitats (`400`, no `400px`).
+- [X] Hi ha exactament 4 classes `.z-`.
+- [X] `.z-1` → `z-index: 100` i `.z-4` → `z-index: 400`.
+- [X] El valor és un número sense unitats (`400`, no `400px`).
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>
