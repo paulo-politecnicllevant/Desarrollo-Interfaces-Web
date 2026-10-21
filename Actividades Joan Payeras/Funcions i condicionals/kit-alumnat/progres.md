@@ -84,9 +84,11 @@ Escriu-les **abans** de compilar. Després escriu què ha passat de veritat.
 
 Després de cada gimnàs, explica cada concepte **amb les teves paraules** en una sola línia.
 
-- `@if / @else if / @else`:
-- `@function` i `@return`:
-- `@warn`:
+- `@if / @else if / @else`: @if establece una condicion, si se cumple, ejecuta el código que posee, @else if establece una
+nueva condición que se ejecuta si el anterior if es false y este es true y @else, ejecuta el código que posee siempre que 
+todas las condiciones anteriores a esta sean false
+- `@function` i `@return`: Una @function es un bloque de código que puede ser reutilizado y que realiza una función específica mientras que @return indica lo que ha de devolver la función
+- `@warn`: Método que muestra un aviso por pantalla en caso de que suceda un error
 - `@for ... through` vs `@for ... to`:
 - Interpolació `#{}`:
 - `math.div` i `math.percentage`:

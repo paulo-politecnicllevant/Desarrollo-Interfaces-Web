@@ -16,12 +16,13 @@ ACTIVIDAD 1.1
         background-color: #fff4e6;
         color: #333;
         border: 2px solid #f5ac78;
-    }@else{
+    }@else if $tema == 'altre'{
         background-color: #eee;
         color: #555;
         border: 2px dashed #999;
+    }@else{
+        @warn "Tema desconocido";
     }
-
 }
 
 .fitxa-charmander{
