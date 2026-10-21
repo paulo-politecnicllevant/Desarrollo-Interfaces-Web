@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokédex CSS · Lliga Pokémon</title>
+  <!-- Estils mínims de la pàgina: NO els toquis. El que compta és el teu pokedex.css -->
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: system-ui, sans-serif; margin: 0; background: #fafafa; color: #222; }
+    .contenidor { max-width: 1100px; margin: 0 auto; }
+    .graella { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem; }
+    .targeta { background: #fff; border-radius: 8px; }
+    .xip { display: inline-block; border-radius: 999px; }
+    .regla { background: #e3e3e3; }
+    .regla > div { background: #6890f0; height: 1rem; }
+    .amplada { position: fixed; bottom: 0.5rem; right: 0.5rem; background: #222; color: #fff; padding: 0.25rem 0.5rem; font-size: 0.75rem; border-radius: 4px; }
+  </style>
+  <link rel="stylesheet" href="../dist/css/pokedex.css">
+</head>
+<body>
+  <div class="contenidor p-3">
+
+    <!-- L.3 · Tipografia responsiva -->
+    <header class="mb-4">
+      <h1 class="mida-display m-0">Pokédex CSS</h1>
+      <p class="mida-titol mt-1 mb-2">Lliga Pokémon</p>
+      <p class="mida-cos m-0">Fes la finestra més estreta i més ampla: aquests textos han de canviar de mida a cada punt de ruptura.</p>
+      <p class="mida-petit mt-1">Text petit per a notes i peus de foto.</p>
+    </header>
+
+    <!-- L.2 · Colors per tipus -->
+    <h2 class="mida-titol mb-2">Tipus</h2>
+    <div class="graella mb-4">
+      <article class="targeta p-3 vora-foc">
+        <span class="xip fons-foc px-2 py-1">Foc</span>
+        <h3 class="text-foc mida-cos mt-2 mb-1">Charmander</h3>
+        <p class="fons-foc-suau p-2 m-0">Fons suau de foc</p>
+      </article>
+      <article class="targeta p-3 vora-aigua">
+        <span class="xip fons-aigua px-2 py-1">Aigua</span>
+        <h3 class="text-aigua mida-cos mt-2 mb-1">Squirtle</h3>
+        <p class="fons-aigua-suau p-2 m-0">Fons suau d'aigua</p>
+      </article>
+      <article class="targeta p-3 vora-planta">
+        <span class="xip fons-planta px-2 py-1">Planta</span>
+        <h3 class="text-planta mida-cos mt-2 mb-1">Bulbasaur</h3>
+        <p class="fons-planta-suau p-2 m-0">Fons suau de planta</p>
+      </article>
+      <article class="targeta p-3 vora-electric">
+        <span class="xip fons-electric px-2 py-1">Elèctric</span>
+        <h3 class="text-electric mida-cos mt-2 mb-1">Pikachu</h3>
+        <p class="fons-electric-suau p-2 m-0">Fons suau elèctric</p>
+      </article>
+      <article class="targeta p-3 vora-psiquic">
+        <span class="xip fons-psiquic px-2 py-1">Psíquic</span>
+        <h3 class="text-psiquic mida-cos mt-2 mb-1">Abra</h3>
+        <p class="fons-psiquic-suau p-2 m-0">Fons suau psíquic</p>
+      </article>
+      <article class="targeta p-3 vora-roca-suau">
+        <span class="xip fons-roca px-2 py-1">Roca</span>
+        <h3 class="text-roca mida-cos mt-2 mb-1">Geodude</h3>
+        <p class="fons-roca-suau p-2 m-0">Vora i fons suaus de roca</p>
+      </article>
+    </div>
+
+    <!-- L.1 · Espaiats -->
+    <h2 class="mida-titol mb-2">Espaiats</h2>
+    <p class="mida-petit mb-2">Cada barra té un <code>padding-left</code> diferent (de <code>.pl-0</code> a <code>.pl-5</code>): la part blava hauria de començar cada vegada més a la dreta.</p>
+    <div class="regla pl-0 mb-1"><div></div></div>
+    <div class="regla pl-1 mb-1"><div></div></div>
+    <div class="regla pl-2 mb-1"><div></div></div>
+    <div class="regla pl-3 mb-1"><div></div></div>
+    <div class="regla pl-4 mb-1"><div></div></div>
+    <div class="regla pl-5 mb-4"><div></div></div>
+
+  </div>
+
+  <div class="amplada" id="amplada"></div>
+  <script>
+    const etiqueta = document.getElementById('amplada');
+    const mostra = () => { etiqueta.textContent = window.innerWidth + 'px'; };
+    window.addEventListener('resize', mostra);
+    mostra();
+  </script>
+</body>
+</html>

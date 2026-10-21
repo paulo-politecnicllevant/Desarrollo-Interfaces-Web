@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laboratori del Professor Pi</title>
+  <!-- Estils mínims del laboratori: NO els toquis. El que compta és el teu main.css -->
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 960px; margin: 0 auto; padding: 1rem; background: #fafafa; color: #222; }
+    section { margin-block: 2rem; padding: 1rem; background: #fff; border: 1px solid #ddd; border-radius: 6px; }
+    h2 { margin-top: 0; }
+    .nota { font-size: 0.85rem; color: #666; }
+    .fila { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: flex-start; }
+    .graella { display: flex; flex-wrap: wrap; }
+    .graella > div { box-sizing: border-box; background: #dfe8ff; border: 1px solid #6890f0; padding: 0.25rem; font-size: 0.75rem; text-align: center; }
+    .mostra { padding: 0.5rem 0.75rem; min-width: 6rem; text-align: center; }
+    .radi { width: 4rem; height: 4rem; background: #f8d030; display: grid; place-items: center; font-size: 0.75rem; }
+  </style>
+  <link rel="stylesheet" href="../dist/css/main.css">
+</head>
+<body>
+  <h1>🧪 Laboratori del Professor Pi</h1>
+  <p class="nota">Si una secció es veu "sense estils", la missió corresponent encara no està feta (o hi ha un error al terminal).</p>
+
+  <!-- ============================ ZONA 1 ============================ -->
+  <section>
+    <h2>🔥 Gimnàs de Foc</h2>
+
+    <h3>Missions 1.1 i 1.2: fitxes</h3>
+    <div class="fila">
+      <div class="fitxa-charmander">Charmander<br><small>tema 'fosc'</small></div>
+      <div class="fitxa-vulpix">Vulpix<br><small>tema 'clar'</small></div>
+      <div class="fitxa-growlithe">Growlithe<br><small>tema 'fosc'</small></div>
+      <div class="fitxa-misteri">??? <br><small>tema 'altre'</small></div>
+      <div class="fitxa-ponyta">Ponyta<br><small>tema 'Fosc'</small></div>
+    </div>
+
+    <h3>Missió 1.3: xapes amb contrast automàtic</h3>
+    <div class="fila">
+      <div class="mostra xapa-charmander">Charmander</div>
+      <div class="mostra xapa-magmar">Magmar</div>
+      <div class="mostra xapa-vulpix">Vulpix</div>
+    </div>
+  </section>
+
+  <!-- ============================ ZONA 2 ============================ -->
+  <section>
+    <h2>💧 Gimnàs d'Aigua</h2>
+
+    <h3>Missió 2.2: graella de 12 columnes</h3>
+    <div class="graella">
+      <div class="columna-12">columna-12</div>
+      <div class="columna-6">columna-6</div><div class="columna-6">columna-6</div>
+      <div class="columna-4">columna-4</div><div class="columna-4">columna-4</div><div class="columna-4">columna-4</div>
+      <div class="columna-3">3</div><div class="columna-3">3</div><div class="columna-3">3</div><div class="columna-3">3</div>
+      <div class="columna-1">1</div><div class="columna-11">columna-11</div>
+    </div>
+
+    <h3>Repte bonus: offsets</h3>
+    <div class="graella">
+      <div class="columna-4 offset-4">columna-4 offset-4</div>
+      <div class="columna-6 offset-6">columna-6 offset-6</div>
+    </div>
+  </section>
+
+  <!-- ============================ ZONA 3 ============================ -->
+  <section>
+    <h2>🌿 Gimnàs de Planta</h2>
+
+    <h3>Missió 3.2: text, fons i vora</h3>
+    <div class="fila">
+      <div class="mostra fons-foc">fons-foc</div>
+      <div class="mostra fons-aigua">fons-aigua</div>
+      <div class="mostra fons-planta">fons-planta</div>
+      <div class="mostra fons-electric">fons-electric</div>
+      <div class="mostra fons-psiquic">fons-psiquic</div>
+      <div class="mostra fons-roca">fons-roca</div>
+    </div>
+    <div class="fila">
+      <div class="mostra text-foc vora-foc">text i vora foc</div>
+      <div class="mostra text-aigua vora-aigua">text i vora aigua</div>
+      <div class="mostra text-planta vora-planta">text i vora planta</div>
+      <div class="mostra text-electric vora-electric">text i vora elèctric</div>
+      <div class="mostra text-psiquic vora-psiquic">text i vora psíquic</div>
+      <div class="mostra text-roca vora-roca">text i vora roca</div>
+    </div>
+
+    <h3>Missió 3.4: tons</h3>
+    <div class="fila">
+      <div class="mostra fons-foc-clar">foc-clar</div>
+      <div class="mostra fons-foc-base">foc-base</div>
+      <div class="mostra fons-foc-fosc">foc-fosc</div>
+      <div class="mostra fons-aigua-clar">aigua-clar</div>
+      <div class="mostra fons-aigua-base">aigua-base</div>
+      <div class="mostra fons-aigua-fosc">aigua-fosc</div>
+    </div>
+    <div class="fila">
+      <div class="mostra fons-planta-clar text-planta-fosc vora-planta-fosc">planta</div>
+      <div class="mostra fons-electric-clar text-electric-fosc vora-electric-fosc">elèctric</div>
+      <div class="mostra fons-psiquic-clar text-psiquic-fosc vora-psiquic-fosc">psíquic</div>
+      <div class="mostra fons-roca-clar text-roca-fosc vora-roca-fosc">roca</div>
+    </div>
+  </section>
+
+  <!-- ============================ ZONA 4 ============================ -->
+  <section>
+    <h2>⚡ Gimnàs Elèctric</h2>
+
+    <h3>Missió 4.3: radis en rem</h3>
+    <div class="fila">
+      <div class="radi radi-1">radi-1</div>
+      <div class="radi radi-2">radi-2</div>
+      <div class="radi radi-3">radi-3</div>
+      <div class="radi radi-4">radi-4</div>
+      <div class="radi radi-5">radi-5</div>
+      <div class="radi radi-6">radi-6</div>
+    </div>
+    <p class="nota">Per comprovar les capes (<code>.menu-pokedex</code>, <code>.modal-pokedex</code>, <code>.drac-perdut</code>) mira directament el CSS compilat.</p>
+  </section>
+</body>
+</html>

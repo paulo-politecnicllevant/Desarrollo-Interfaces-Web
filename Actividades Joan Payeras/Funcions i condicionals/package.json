@@ -1,0 +1,17 @@
+{
+  "name": "funcions-i-condicionals",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded --source-map",
+    "sass:build": "sass src/scss/main.scss:dist/css/main.css --style=compressed --no-source-map"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sass": "^1.105.2"
+  }
+}
