@@ -1,17 +1,143 @@
-/* Error: expected "{".
- *     ,
- * 322 | }n
- *     |   ^
- *     '
- *   scss/styleConjuntv3.scss 322:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a     \2577 \a 322 \2502  }n\a     \2502    ^\a     \2575 \a   scss/styleConjuntv3.scss 322:3  root stylesheet';
+@charset "UTF-8";
+.menu-principal {
+  background-color: #2f4f4f;
+  padding: 0 1.5rem;
 }
+.menu-principal__llista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-principal__item {
+  margin-right: 0.5rem;
+}
+.menu-principal__enllac {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  transition: background-color 0.3s ease;
+}
+.menu-principal__enllac:hover {
+  background-color: rgb(29.6218487395%, 49.7899159664%, 49.7899159664%);
+}
+.menu-principal__enllac:focus-visible {
+  outline: 2px solid #ff8c00;
+  outline-offset: 2px;
+}
+.menu-principal__enllac:focus {
+  color: #ff8c00;
+}
+
+.contenidor {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.perfil {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  width: 18.75rem;
+  transition: box-shadow 0.3s ease;
+}
+.perfil:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+.perfil__avatar {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+.perfil__nom {
+  margin-bottom: 0.5rem;
+  color: #2f4f4f;
+  font-size: 1.5rem;
+}
+.perfil__carrec {
+  color: #696969;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+.perfil__bio {
+  font-size: 0.875rem;
+  color: #555555;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.perfil__boto {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.3s ease;
+}
+.perfil__boto:hover {
+  background-color: rgb(7.2829131653%, 29.8599439776%, 79.3837535014%);
+}
+.perfil--administrador {
+  border-top: 4px solid #ff6347;
+}
+.perfil--administrador .perfil__boto {
+  background-color: #ff6347;
+}
+.perfil--administrador .perfil__boto:hover {
+  background-color: rgb(100%, 21.8670076726%, 7.8431372549%);
+}
+
+.plataforma {
+  max-width: 37.5rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+.plataforma__titol {
+  margin-bottom: 1.5rem;
+  color: #2f4f4f;
+  font-size: 1.5rem;
+}
+.plataforma__llista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.plataforma__item {
+  position: relative;
+  padding-left: 2.5rem;
+  margin-bottom: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  transition: color 0.2s ease;
+}
+.plataforma__item::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #3cb371;
+  font-weight: bold;
+  font-size: 1.125rem;
+  transition: transform 0.2s ease;
+}
+.plataforma__item:hover {
+  color: #3cb371;
+}
+.plataforma__item:hover::before {
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=styleConjuntv3.css.map */
