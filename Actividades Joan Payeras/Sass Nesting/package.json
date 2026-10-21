@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass --watch scss/styleConjunt.scss css/styleConjunt.css",
-    "sass:build": "sass scss/styleConjunt.scss css/styleConjunt.css --style=compressed --no-source-map",
-    "sass:dev": "sass --watch scss/styleConjunt.scss css/styleConjunt.css --style=expanded --source-map"
+    "sass:watch": "sass --watch scss/styleConjuntv3.scss css/styleConjuntv3.css",
+    "sass:build": "sass scss/styleConjuntv3.scss css/styleConjuntv3.css --style=compressed --no-source-map",
+    "sass:dev": "sass --watch scss/styleConjuntv3.scss css/styleConjuntv3.css --style=expanded --source-map"
   },
   "keywords": [],
   "author": "",
