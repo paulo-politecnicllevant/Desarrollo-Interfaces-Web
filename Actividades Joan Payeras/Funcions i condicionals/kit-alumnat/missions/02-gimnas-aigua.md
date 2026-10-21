@@ -122,13 +122,13 @@ Requisits:
 
 ### 🔍 Autocomprovació
 
-- [ ] Hi ha **exactament 12** classes `.columna-` (compta-les amb `Ctrl + F` i l'expressió regular `^\.columna-`).
-- [ ] `.columna-3` → `width: 25%`
-- [ ] `.columna-6` → `width: 50%`
-- [ ] `.columna-12` → `width: 100%`
-- [ ] `.columna-1` → `width: 8.3333333333%`
-- [ ] El terminal **no** mostra cap `DEPRECATION WARNING`.
-- [ ] Al laboratori, cada fila de la graella ocupa tota l'amplada.
+- [X] Hi ha **exactament 12** classes `.columna-` (compta-les amb `Ctrl + F` i l'expressió regular `^\.columna-`).
+- [X] `.columna-3` → `width: 25%`
+- [X] `.columna-6` → `width: 50%`
+- [X] `.columna-12` → `width: 100%`
+- [X] `.columna-1` → `width: 8.3333333333%`
+- [X] El terminal **no** mostra cap `DEPRECATION WARNING`.
+- [X] Al laboratori, cada fila de la graella ocupa tota l'amplada.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>

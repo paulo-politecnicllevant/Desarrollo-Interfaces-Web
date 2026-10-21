@@ -1,0 +1,11 @@
+@use 'sass:math';
+/*============================================
+ACTIVIDAD 2.2
+============================================*/
+$columnes: 12;
+
+@for $i from 1 through $columnes {
+    .columna-#{$i}{
+        width: math.percentage(math.div($i, 12));
+    }
+}
