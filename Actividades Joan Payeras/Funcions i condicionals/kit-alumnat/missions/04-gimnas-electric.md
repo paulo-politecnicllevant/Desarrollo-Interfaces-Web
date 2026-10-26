@@ -102,10 +102,10 @@ Posa aquestes línies **al final** de `_funcions.scss` i mira el terminal. Totes
 
 ### 🔍 Autocomprovació
 
-- [ ] Les 7 proves donen el resultat esperat.
-- [ ] Fas servir `math.div`, `math.unit` i/o `math.is-unitless` (res de `/`, `unit()` ni `unitless()`).
-- [ ] `px-a-rem(0px)` retorna `0`, no `0rem`. Si no ho fa, llegeix la pista 🟢.
-- [ ] Quan acabis, **comenta** les línies `@debug` (així no embrutaran el terminal).
+- [X] Les 7 proves donen el resultat esperat.
+- [X] Fas servir `math.div`, `math.unit` i/o `math.is-unitless` (res de `/`, `unit()` ni `unitless()`).
+- [X] `px-a-rem(0px)` retorna `0`, no `0rem`. Si no ho fa, llegeix la pista 🟢.
+- [X] Quan acabis, **comenta** les línies `@debug` (així no embrutaran el terminal).
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>

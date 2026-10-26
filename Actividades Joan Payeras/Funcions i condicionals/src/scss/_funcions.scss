@@ -1,0 +1,28 @@
+@use 'sass:math';
+/*=============================================
+ACTIVIDAD 4.1
+*=============================================*/
+@function px-a-rem($valor, $base: 16px) {
+  @if $valor == 0 {
+    @return 0;
+  }
+
+  @if math.unit($valor) == 'rem' {
+    @return $valor;
+  }
+
+  @if unitless($valor) {
+    @warn "px-a-rem: #{$valor} no té unitat, es tracta com a px.";
+    $valor: $valor * 1px;
+  }
+
+  @return math.div($valor, $base) * 1rem;
+}
+
+//@debug px-a-rem(24px);
+//@debug px-a-rem(8px);
+//@debug px-a-rem(0);
+//@debug px-a-rem(0px);
+//@debug px-a-rem(2rem);
+//@debug px-a-rem(24);
+//@debug px-a-rem(20px, 10px);
