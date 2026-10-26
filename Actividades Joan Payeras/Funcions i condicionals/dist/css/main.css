@@ -486,7 +486,44 @@ ACTIVIDAD 4.1
 ACTIVIDAD 4.2
 *=============================================*/
 /*=============================================
-ACTIVIDAD 4.1
+ACTIVIDAD 4.3
 *=============================================*/
+.radi-1 {
+  border-radius: 0.125rem;
+}
+
+.radi-2 {
+  border-radius: 0.25rem;
+}
+
+.radi-3 {
+  border-radius: 0.5rem;
+}
+
+.radi-4 {
+  border-radius: 0.75rem;
+}
+
+.radi-5 {
+  border-radius: 1rem;
+}
+
+.radi-6 {
+  border-radius: 1.5rem;
+}
+
+.menu-pokedex {
+  position: relative;
+  z-index: 100;
+}
+
+.modal-pokedex {
+  position: fixed;
+  z-index: 200;
+}
+
+.drac-perdut {
+  position: absolute;
+}
 
 /*# sourceMappingURL=main.css.map */

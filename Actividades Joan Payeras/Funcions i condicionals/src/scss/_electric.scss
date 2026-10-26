@@ -1,3 +1,35 @@
+@use 'funcions' as f;
 /*=============================================
-ACTIVIDAD 4.1
+ACTIVIDAD 4.3
 *=============================================*/
+//Parte A
+$radis: (
+  1: 2px,
+  2: 4px,
+  3: 8px,
+  4: 12px,
+  5: 16px,
+  6: 24px,
+);
+
+@each $clau, $valor in $radis {
+  .radi-#{$clau} {
+    border-radius: f.px-a-rem($valor);
+  }
+}
+
+//Parte B
+.menu-pokedex {
+  position: relative;
+  z-index: f.z('menu');
+}
+
+.modal-pokedex {
+  position: fixed;
+  z-index: f.z('modal');
+}
+
+.drac-perdut {
+  position: absolute;
+  z-index: f.z('drac');
+}

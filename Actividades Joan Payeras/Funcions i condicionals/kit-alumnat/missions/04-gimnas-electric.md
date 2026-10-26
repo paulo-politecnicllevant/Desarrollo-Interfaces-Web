@@ -270,11 +270,11 @@ Crea aquestes tres classes fent servir la funció `z()`:
 
 ### 🔍 Autocomprovació
 
-- [ ] `.radi-3` → `border-radius: 0.5rem` i `.radi-6` → `border-radius: 1.5rem`.
-- [ ] Al CSS **no** apareix enlloc el text `px-a-rem(` ni `z(`.
-- [ ] `.menu-pokedex` → `z-index: 100`.
-- [ ] Has comprovat la predicció de `.drac-perdut` i saps explicar-la.
-- [ ] Al laboratori, els quadrats tenen les cantonades cada vegada més arrodonides.
+- [X] `.radi-3` → `border-radius: 0.5rem` i `.radi-6` → `border-radius: 1.5rem`.
+- [X] Al CSS **no** apareix enlloc el text `px-a-rem(` ni `z(`.
+- [X] `.menu-pokedex` → `z-index: 100`.
+- [X] Has comprovat la predicció de `.drac-perdut` i saps explicar-la.
+- [X] Al laboratori, els quadrats tenen les cantonades cada vegada més arrodonides.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>
