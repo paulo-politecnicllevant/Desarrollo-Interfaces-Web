@@ -33,3 +33,12 @@ $radis: (
   position: absolute;
   z-index: f.z('drac');
 }
+
+/*=============================================
+ACTIVIDAD BONUS
+*=============================================*/
+@for $i from 0 through 3 {
+  .mida-pas-#{$i} {
+    font-size: f.escala-modular($i);
+  }
+}   

@@ -50,3 +50,15 @@ $capes-z: (
 //@debug z('modal');
 //@debug z('base');
 //@debug z('drac');
+
+/*=============================================
+ACTIVIDAD BONUS
+*=============================================*/
+@function escala-modular($pas, $base: 1rem, $ratio: 1.25) {
+  @return $base * math.pow($ratio, $pas);
+}
+
+//@debug escala-modular(0);
+//@debug escala-modular(1);
+//@debug escala-modular(3);
+//@debug escala-modular(-1);
