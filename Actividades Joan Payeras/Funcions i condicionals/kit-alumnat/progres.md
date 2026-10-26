@@ -93,8 +93,8 @@ todas las condiciones anteriores a esta sean false
 - Interpolació `#{}`: Permite poner el valor de una variable dentro de una clase
 - `math.div` i `math.percentage`: Métodos de math que, uno realiza una división, y el otro calcula un porcentage
 - Mapes `( clau: valor )`:
-- `@each`:
-- `@each` imbricat:
+- `@each`: Bucle que recorres una lista o mapa asignando cada valor a una variable
+- `@each` imbricat: @each dentro de otro @each
 - `@debug`:
 - `null` com a valor d'una propietat:
 - Diferència entre `@function` i `@mixin`:

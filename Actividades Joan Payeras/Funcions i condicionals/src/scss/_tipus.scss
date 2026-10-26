@@ -1,4 +1,5 @@
 @use 'sass:map';
+@use 'sass:color';
 
 /*=============================================
 ACTIVIDAD 3.1
@@ -58,3 +59,27 @@ $tipus-tons: (
     }
   }
 }
+
+/*=============================================
+ACTIVIDAD BONUS
+*=============================================*/
+$tipus-colors: (
+  'foc': #f08030,
+  'aigua': #6890f0,
+  'planta': #78c850,
+  'electric': #f8d030,
+  'psiquic': #f85888,
+  'roca': #b8a038,
+);
+
+$tons-automatics: ();
+
+@each $tipus, $color in $tipus-colors {
+  $tons-automatics: map.set($tons-automatics, $tipus, (
+    'clar': color.mix(#fff, $color, 35%),
+    'base': $color,
+    'fosc': color.mix(#000, $color, 35%)
+  ));
+}
+
+@debug $tons-automatics;   
