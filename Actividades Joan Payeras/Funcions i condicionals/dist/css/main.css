@@ -179,6 +179,12 @@ ACTIVIDAD BONUS
   margin-left: 91.6666666667%;
 }
 
+/*=============================================
+ACTIVIDAD 3.1
+*=============================================*/
+/*=============================================
+ACTIVIDAD 3.2
+*=============================================*/
 .text-foc {
   color: #f08030;
 }
@@ -249,6 +255,225 @@ ACTIVIDAD BONUS
 
 .vora-roca {
   border: 2px solid #b8a038;
+}
+
+/*=============================================
+ACTIVIDAD 3.4
+*=============================================*/
+.text-foc-clar {
+  color: #f5ac78;
+}
+
+.fons-foc-clar {
+  background-color: #f5ac78;
+}
+
+.vora-foc-clar {
+  border: 2px solid #f5ac78;
+}
+
+.text-foc-base {
+  color: #f08030;
+}
+
+.fons-foc-base {
+  background-color: #f08030;
+}
+
+.vora-foc-base {
+  border: 2px solid #f08030;
+}
+
+.text-foc-fosc {
+  color: #9c531f;
+}
+
+.fons-foc-fosc {
+  background-color: #9c531f;
+}
+
+.vora-foc-fosc {
+  border: 2px solid #9c531f;
+}
+
+.text-aigua-clar {
+  color: #9db7f5;
+}
+
+.fons-aigua-clar {
+  background-color: #9db7f5;
+}
+
+.vora-aigua-clar {
+  border: 2px solid #9db7f5;
+}
+
+.text-aigua-base {
+  color: #6890f0;
+}
+
+.fons-aigua-base {
+  background-color: #6890f0;
+}
+
+.vora-aigua-base {
+  border: 2px solid #6890f0;
+}
+
+.text-aigua-fosc {
+  color: #445e9c;
+}
+
+.fons-aigua-fosc {
+  background-color: #445e9c;
+}
+
+.vora-aigua-fosc {
+  border: 2px solid #445e9c;
+}
+
+.text-planta-clar {
+  color: #a7db8d;
+}
+
+.fons-planta-clar {
+  background-color: #a7db8d;
+}
+
+.vora-planta-clar {
+  border: 2px solid #a7db8d;
+}
+
+.text-planta-base {
+  color: #78c850;
+}
+
+.fons-planta-base {
+  background-color: #78c850;
+}
+
+.vora-planta-base {
+  border: 2px solid #78c850;
+}
+
+.text-planta-fosc {
+  color: #4e8234;
+}
+
+.fons-planta-fosc {
+  background-color: #4e8234;
+}
+
+.vora-planta-fosc {
+  border: 2px solid #4e8234;
+}
+
+.text-electric-clar {
+  color: #fae078;
+}
+
+.fons-electric-clar {
+  background-color: #fae078;
+}
+
+.vora-electric-clar {
+  border: 2px solid #fae078;
+}
+
+.text-electric-base {
+  color: #f8d030;
+}
+
+.fons-electric-base {
+  background-color: #f8d030;
+}
+
+.vora-electric-base {
+  border: 2px solid #f8d030;
+}
+
+.text-electric-fosc {
+  color: #a1871f;
+}
+
+.fons-electric-fosc {
+  background-color: #a1871f;
+}
+
+.vora-electric-fosc {
+  border: 2px solid #a1871f;
+}
+
+.text-psiquic-clar {
+  color: #fa92b2;
+}
+
+.fons-psiquic-clar {
+  background-color: #fa92b2;
+}
+
+.vora-psiquic-clar {
+  border: 2px solid #fa92b2;
+}
+
+.text-psiquic-base {
+  color: #f85888;
+}
+
+.fons-psiquic-base {
+  background-color: #f85888;
+}
+
+.vora-psiquic-base {
+  border: 2px solid #f85888;
+}
+
+.text-psiquic-fosc {
+  color: #a13959;
+}
+
+.fons-psiquic-fosc {
+  background-color: #a13959;
+}
+
+.vora-psiquic-fosc {
+  border: 2px solid #a13959;
+}
+
+.text-roca-clar {
+  color: #d1c17d;
+}
+
+.fons-roca-clar {
+  background-color: #d1c17d;
+}
+
+.vora-roca-clar {
+  border: 2px solid #d1c17d;
+}
+
+.text-roca-base {
+  color: #b8a038;
+}
+
+.fons-roca-base {
+  background-color: #b8a038;
+}
+
+.vora-roca-base {
+  border: 2px solid #b8a038;
+}
+
+.text-roca-fosc {
+  color: #786824;
+}
+
+.fons-roca-fosc {
+  background-color: #786824;
+}
+
+.vora-roca-fosc {
+  border: 2px solid #786824;
 }
 
 /*# sourceMappingURL=main.css.map */

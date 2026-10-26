@@ -1,3 +1,8 @@
+@use 'sass:map';
+
+/*=============================================
+ACTIVIDAD 3.1
+*=============================================*/
 $tipus-colors: (
 'foc': #f08030,
 'aigua': #6890f0,
@@ -7,6 +12,9 @@ $tipus-colors: (
 'roca': #b8a038,
 );
 
+/*=============================================
+ACTIVIDAD 3.2
+*=============================================*/
 @each $tipus, $color in $tipus-colors{
     .text-#{$tipus}{
         color: $color;
@@ -23,4 +31,30 @@ $tipus-colors: (
     .vora-#{$tipus}{
         border: 2px solid $color;
     }
+}
+
+/*=============================================
+ACTIVIDAD 3.4
+*=============================================*/
+$tipus-tons: (
+  'foc':      ('clar': #f5ac78, 'base': #f08030, 'fosc': #9c531f),
+  'aigua':    ('clar': #9db7f5, 'base': #6890f0, 'fosc': #445e9c),
+  'planta':   ('clar': #a7db8d, 'base': #78c850, 'fosc': #4e8234),
+  'electric': ('clar': #fae078, 'base': #f8d030, 'fosc': #a1871f),
+  'psiquic':  ('clar': #fa92b2, 'base': #f85888, 'fosc': #a13959),
+  'roca':     ('clar': #d1c17d, 'base': #b8a038, 'fosc': #786824),
+);
+
+@each $tipus, $tons in $tipus-tons {
+  @each $to, $color in $tons {
+    .text-#{$tipus}-#{$to} {
+      color: $color;
+    }
+    .fons-#{$tipus}-#{$to} {
+      background-color: $color;
+    }
+    .vora-#{$tipus}-#{$to} {
+      border: 2px solid $color;
+    }
+  }
 }

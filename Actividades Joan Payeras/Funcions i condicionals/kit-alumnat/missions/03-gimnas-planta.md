@@ -249,10 +249,10 @@ Si un `@each` et dona, a cada volta, un valor que és un mapa... què pots fer a
 
 ### 🔍 Autocomprovació
 
-- [ ] `.fons-foc-clar` → `background-color: #f5ac78`.
-- [ ] `.vora-roca-fosc` → `border: 2px solid #786824`.
-- [ ] Recompte amb l'expressió regular `^\.(text|fons|vora)-[a-z]+-(clar|base|fosc)`: coincideix amb la teva predicció?
-- [ ] Al laboratori, la fila de tons té tres intensitats per a cada tipus.
+- [X] `.fons-foc-clar` → `background-color: #f5ac78`.
+- [X] `.vora-roca-fosc` → `border: 2px solid #786824`.
+- [X] Recompte amb l'expressió regular `^\.(text|fons|vora)-[a-z]+-(clar|base|fosc)`: coincideix amb la teva predicció?
+- [X] Al laboratori, la fila de tons té tres intensitats per a cada tipus.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>
