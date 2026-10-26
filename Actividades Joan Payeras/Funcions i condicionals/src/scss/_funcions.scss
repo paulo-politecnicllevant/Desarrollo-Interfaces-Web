@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use 'sass:map';
 /*=============================================
 ACTIVIDAD 4.1
 *=============================================*/
@@ -26,3 +27,26 @@ ACTIVIDAD 4.1
 //@debug px-a-rem(2rem);
 //@debug px-a-rem(24);
 //@debug px-a-rem(20px, 10px);
+
+/*=============================================
+ACTIVIDAD 4.2
+*=============================================*/
+$capes-z: (
+  'base': 1,
+  'menu': 100,
+  'modal': 200,
+  'notificacio': 300,
+);
+
+@function z($capa) {
+  @if map.has-key($capes-z, $capa) {
+    @return map.get($capes-z, $capa);
+  }
+
+  @warn "z: la capa '#{$capa}' no existeix a $capes-z.";
+  @return null;
+}
+
+//@debug z('modal');
+//@debug z('base');
+//@debug z('drac');

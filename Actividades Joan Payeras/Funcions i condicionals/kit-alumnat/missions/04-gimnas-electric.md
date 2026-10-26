@@ -181,9 +181,9 @@ A `_funcions.scss`:
 
 ### 🔍 Autocomprovació
 
-- [ ] Les 3 proves donen el resultat esperat.
-- [ ] El `WARNING` diu el nom de la capa que no existeix.
-- [ ] Comenta els `@debug` quan acabis.
+- [X] Les 3 proves donen el resultat esperat.
+- [X] El `WARNING` diu el nom de la capa que no existeix.
+- [X] Comenta els `@debug` quan acabis.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>
