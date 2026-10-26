@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "sass:watch": "sass --watch src/scss/main.scss:dist/css/main.css --style=expanded --source-map",
-    "sass:build": "sass src/scss/main.scss:dist/css/main.css --style=compressed --no-source-map"
+    "sass:build": "sass src/scss/main.scss:dist/css/main.css --style=compressed --no-source-map",
+    "lliga:watch": "sass --watch src/scss/pokedex.scss:dist/css/pokedex.css --style=expanded --source-map",
+    "lliga:build": "sass src/scss/pokedex.scss:dist/css/pokedex.css --style=compressed --no-source-map"
   },
   "keywords": [],
   "author": "",
