@@ -7,3 +7,20 @@ $tipus-colors: (
 'roca': #b8a038,
 );
 
+@each $tipus, $color in $tipus-colors{
+    .text-#{$tipus}{
+        color: $color;
+    }
+}
+
+@each $tipus, $color in $tipus-colors{
+    .fons-#{$tipus}{
+        background-color: $color;
+    }
+}
+
+@each $tipus, $color in $tipus-colors{
+    .vora-#{$tipus}{
+        border: 2px solid $color;
+    }
+}

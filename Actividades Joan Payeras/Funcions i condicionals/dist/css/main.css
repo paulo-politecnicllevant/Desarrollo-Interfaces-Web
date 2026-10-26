@@ -179,4 +179,76 @@ ACTIVIDAD BONUS
   margin-left: 91.6666666667%;
 }
 
+.text-foc {
+  color: #f08030;
+}
+
+.text-aigua {
+  color: #6890f0;
+}
+
+.text-planta {
+  color: #78c850;
+}
+
+.text-electric {
+  color: #f8d030;
+}
+
+.text-psiquic {
+  color: #f85888;
+}
+
+.text-roca {
+  color: #b8a038;
+}
+
+.fons-foc {
+  background-color: #f08030;
+}
+
+.fons-aigua {
+  background-color: #6890f0;
+}
+
+.fons-planta {
+  background-color: #78c850;
+}
+
+.fons-electric {
+  background-color: #f8d030;
+}
+
+.fons-psiquic {
+  background-color: #f85888;
+}
+
+.fons-roca {
+  background-color: #b8a038;
+}
+
+.vora-foc {
+  border: 2px solid #f08030;
+}
+
+.vora-aigua {
+  border: 2px solid #6890f0;
+}
+
+.vora-planta {
+  border: 2px solid #78c850;
+}
+
+.vora-electric {
+  border: 2px solid #f8d030;
+}
+
+.vora-psiquic {
+  border: 2px solid #f85888;
+}
+
+.vora-roca {
+  border: 2px solid #b8a038;
+}
+
 /*# sourceMappingURL=main.css.map */

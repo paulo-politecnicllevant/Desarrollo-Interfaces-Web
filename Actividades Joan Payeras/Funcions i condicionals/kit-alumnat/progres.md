@@ -23,7 +23,7 @@
 | 🎁 Bonus Aigua | | | | |
 | 3.1 Mapa de tipus | | | | |
 | 3.2 Utilitats de color | | | | |
-| 3.3 Quantes classes? | | | | |
+| 3.3 Quantes classes? (6 * 3) + (6 * 3) + (6 * 3) = 54 
 | 3.4 Mapes imbricats | | | | |
 | 🎁 Bonus Planta | | | | |
 | 4.1 px-a-rem | | | | |

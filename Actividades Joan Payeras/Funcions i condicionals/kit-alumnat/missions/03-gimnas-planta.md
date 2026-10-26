@@ -74,7 +74,7 @@ Crea un mapa anomenat **`$tipus-colors`** amb aquests 6 tipus:
 
 ### 🔍 Autocomprovació
 
-- [ ] Compila sense errors.
+- [X] Compila sense errors.
 - [ ] Has comprovat la teva predicció.
 - [ ] Afegeix temporalment `@debug $tipus-colors;` sota el mapa: el terminal ha de mostrar els 6 tipus. Després treu-lo.
 
@@ -119,9 +119,9 @@ Per exemple, per a `foc`: `.text-foc`, `.fons-foc` i `.vora-foc`.
 
 ### 🔍 Autocomprovació
 
-- [ ] Existeixen `.text-foc`, `.fons-aigua` i `.vora-roca` amb el color correcte.
-- [ ] Els noms de les classes **no** tenen cometes (`.text-foc`, no `.text-'foc'`).
-- [ ] Al laboratori, la secció *Gimnàs de Planta* té colors.
+- [X] Existeixen `.text-foc`, `.fons-aigua` i `.vora-roca` amb el color correcte.
+- [X] Els noms de les classes **no** tenen cometes (`.text-foc`, no `.text-'foc'`).
+- [X] Al laboratori, la secció *Gimnàs de Planta* té colors.
 
 <details>
 <summary>🟢 Pista 1 (suau) · la missió valdrà 70 XP</summary>
