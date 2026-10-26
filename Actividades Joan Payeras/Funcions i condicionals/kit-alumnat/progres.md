@@ -64,7 +64,7 @@ Escriu-les **abans** de compilar. Després escriu què ha passat de veritat.
 | 🔥 Foc: La diferencia de los if, es que en el if de sass se ejecuta en el compilador scss mientras que el de java en el navegador
 | 💧 Aigua: Se hace hasta 11 ya que una tabla de 12 columnas ya ocupa el 100% del ancho. Un desplazamiento del 100% dejaria la columna fuera del espacio disponible, por lo que los únicos desplazamientos útiles son los que van del 1-11
 | 🌿 Planta: 
-| ⚡ Elèctric: 
+| ⚡ Elèctric: No, una @function en Sass solo puede devolver un valor, no puede generar un css ya que el @return cierra la función. En su lugar, se puede usar un bucle como @for, @each, etc...
 | 🏆 Lliga | (combat final oral) | |
 
 ---
@@ -95,10 +95,10 @@ todas las condiciones anteriores a esta sean false
 - Mapes `( clau: valor )`:
 - `@each`: Bucle que recorres una lista o mapa asignando cada valor a una variable
 - `@each` imbricat: @each dentro de otro @each
-- `@debug`:
-- `null` com a valor d'una propietat:
-- Diferència entre `@function` i `@mixin`:
-- `@content`:
+- `@debug`: Muestra un valor en la terminal para así, poder ver que devuelve una función o variable
+- `null` com a valor d'una propietat: Sass omite la propiedad en el css
+- Diferència entre `@function` i `@mixin`: @function devuelve un valor que se asigna a una propiedad, @mixin genera bloques de código css
+- `@content`: Etiqueta de @mixin que permite inyectar código
 
 ---
 
