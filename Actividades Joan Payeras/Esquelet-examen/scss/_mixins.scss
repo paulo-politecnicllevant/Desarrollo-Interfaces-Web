@@ -1,0 +1,92 @@
+// TODO: Completa el mixin utilitzanbt flex, amb el justificat al centre, l'alineació dels objectes al centre i la direcció per paràmetre, on per defecte serà en fila.
+@mixin flex-center($direction: row) {
+  // COMPLETAR AQUÍ
+}
+
+@mixin button-style($bg-color, $text-color: $white, $hover-darken: 10%) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: none;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $border-radius-md;
+  cursor: pointer;
+  transition: all $transition-normal;
+  font-weight: 600;
+  
+  &:hover {
+    background-color: darken($bg-color, $hover-darken);
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// TODO: Completa el mixin per aplicar media queries segons el breakpoint. A més, cada punt de ruptura ha de tenir un contingut obligatori a rellenar.
+@mixin responsive($breakpoint) {
+  // COMPLETAR AQUÍ
+}
+
+// TODO: Completar el mixin per crear targetes amb un color de fons blanc, el padding, on per defecte serà lg i la ombra, on per defecte serà md.
+@mixin card($padding, $shadow) {
+  // COMPLETAR AQUÍ
+  border-radius: $border-radius-lg;
+  transition: transform $transition-normal;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+@mixin text-truncate($lines: 1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  @if $lines == 1 {
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+  }
+}
+
+// TODO: Completar el mixin per crear el grid responsiu. El grid ha de ser de 3 columnes per defecte i l'espaiat entre ells, per defecte, ha de ser lg. A més, si el breakpoint és tablet, el grid ha de ser de 2 columnes i si el breakpoint és mòbil, el grid ha de ser de 1 columna.
+@mixin grid-layout($columns: 3, $gap: $spacing-lg) {
+  // COMPLETAR AQUÍ
+}
+
+@mixin overlay($opacity: 0.5) {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, $opacity);
+    z-index: 1;
+  }
+}
+
+@mixin fade-in($duration: $transition-normal) {
+  animation: fadeIn $duration ease-in;
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+

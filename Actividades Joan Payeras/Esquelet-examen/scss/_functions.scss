@@ -1,0 +1,41 @@
+// TODO: Completar la @function rem, que ha de retornar pixels a rem. Un rem equival a 16 pixels.
+@function rem($pixels) {
+  // COMPLETAR AQUÍ
+}
+
+// TODO: Funció que ha de retornar l'espaiat mitja multiplicat per un multiplicador. Completar la @function spacing
+@function spacing($multiplier) {
+  // COMPLETAR AQUÍ
+}
+
+
+@function color-alpha($color, $opacity) {
+  @return rgba($color, $opacity);
+}
+
+@function text-contrast($background) {
+  @if (lightness($background) > 50%) {
+    @return $dark-color;
+  } @else {
+    @return $white;
+  }
+}
+
+@function get-color($color-name) {
+  @if map-has-key($theme-colors, $color-name) {
+    @return map-get($theme-colors, $color-name);
+  } @else {
+    @warn "El color '#{$color-name}' no existe en la paleta";
+    @return $primary-color;
+  }
+}
+
+// TODO: Crea una funció que retorni un percentatge.
+@function percentage-calc($value, $total) {
+  // COMPLETAR AQUÍ
+}
+
+@function invert-color($color) {
+  @return invert($color);
+}
+

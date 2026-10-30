@@ -1,0 +1,51 @@
+.footer {
+  background-color: $dark-color;
+  color: $light-color;
+  padding: spacing(3) 0 $spacing-lg;
+  
+  .footer-content {
+    @include grid-layout(3, spacing(2));
+    margin-bottom: spacing(2);
+    
+    .footer-section {
+      h3 {
+        color: $white;
+        font-size: $font-size-lg;
+        margin-bottom: $spacing-md;
+      }
+      
+      p {
+        font-size: $font-size-sm;
+        line-height: 1.8;
+      }
+      
+      ul {
+        li {
+          margin-bottom: $spacing-sm;
+          
+          a {
+            color: $light-color;
+            font-size: $font-size-sm;
+            
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: $spacing-lg;
+    border-top: 1px solid color-alpha($light-color, 0.2);
+    
+    p {
+      margin: 0;
+      font-size: $font-size-sm;
+      color: $text-light;
+    }
+  }
+}
+

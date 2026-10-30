@@ -1,0 +1,62 @@
+.card {
+  @include card($spacing-lg, $shadow-md);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $spacing-md;
+    
+    .card-title {
+      margin: 0;
+      font-size: $font-size-lg;
+      color: $dark-color;
+    }
+  }
+  
+  .card-body {
+    flex: 1;
+    
+    .card-text {
+      color: $text-secondary;
+      margin-bottom: $spacing-sm;
+    }
+    
+    .price {
+      font-size: $font-size-xl;
+      font-weight: bold;
+      color: $success-color;
+      margin: $spacing-md 0;
+    }
+  }
+  
+  .card-footer {
+    margin-top: $spacing-md;
+    padding-top: $spacing-md;
+    border-top: 1px solid $light-color;
+  }
+}
+
+@each $type, $color in $card-types {
+  .card-#{$type} {
+    border-left: 4px solid $color;
+    
+    @if $type == 'premium' {
+      background: linear-gradient(135deg, lighten($color, 40%), $white);
+    }
+  }
+}
+
+
+// TODO: Fes un bucle per crear nivells d'opacitat. Itera per crear quatre nivells d'opacitat que seràn:
+// nivel 1: opacity 1
+// nivel 2: opacity 0.95
+// nivel 3: opacity 0.9
+// nivel 4: opacity 0.85
+
+// COMPLETAR AQUÍ
+
+

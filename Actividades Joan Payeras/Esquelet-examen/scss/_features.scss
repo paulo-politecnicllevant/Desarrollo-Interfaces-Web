@@ -1,0 +1,57 @@
+.features {
+  padding: spacing(4) 0;
+  background-color: $bg-secondary;
+  
+  .feature-list {
+    // TODO: Crida al mixin grid-layout amb 4 columnes i espaiat lg.
+    // COMPLETAR AQUÍ
+    margin-top: spacing(2);
+    
+    .feature-item {
+      // TODO: Crida al mixin card amb un espaiat lg i una ombra sm.
+      // COMPLETAR AQUÍ
+      text-align: center;
+      
+      .feature-icon {
+        // TODO: Dona un valor al font-size fent una crida a la funció rem(valor). 
+        margin-bottom: $spacing-md;
+      }
+      
+      h3 {
+        font-size: $font-size-lg;
+        color: $primary-color;
+        margin-bottom: $spacing-sm;
+      }
+      
+      p {
+        color: $text-secondary;
+        font-size: $font-size-sm;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  .feature-item.item-#{$i} {
+    @if $i == 1 {
+      border-top: 3px solid $primary-color;
+    } @else if $i == 2 {
+      border-top: 3px solid $secondary-color;
+    } @else if $i == 3 {
+      border-top: 3px solid $warning-color;
+    } @else {
+      border-top: 3px solid $info-color;
+    }
+    
+    @for $j from 1 through 2 {
+      &:hover {
+        @if $j == 1 {
+          animation-delay: 0.1s;
+        }
+      }
+    }
+  }
+}
+
+

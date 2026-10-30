@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto SASS - Tienda de Productos</title>
+    <!-- Para el proyecto completo -->
+    <link rel="stylesheet" href="proyecto-completo/css/main.css"> 
+    
+    <!-- Para el proyecto esqueleto 
+    <link rel="stylesheet" href="proyecto-esqueleto/css/main.css">-->
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <h1 class="logo">TechShop</h1>
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Productos</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h2 class="hero-title">Bienvenido a TechShop</h2>
+                <p class="hero-text">Los mejores productos tecnológicos</p>
+                <button class="btn btn-primary btn-lg">Ver Productos</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="container">
+                <h2 class="section-title">Nuestros Productos</h2>
+                
+                <div class="product-grid">
+                    <article class="card card-basic level-1">
+                        <div class="card-header">
+                            <h3 class="card-title">Laptop Pro</h3>
+                            <span class="badge badge-new">Nuevo</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Potente laptop para profesionales</p>
+                            <p class="price">$1299</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-sm">Comprar</button>
+                        </div>
+                    </article>
+
+                    <article class="card card-premium level-2">
+                        <div class="card-header">
+                            <h3 class="card-title">Smartphone X</h3>
+                            <span class="badge badge-hot">Popular</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Última generación de smartphones</p>
+                            <p class="price">$899</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary btn-sm">Comprar</button>
+                        </div>
+                    </article>
+
+                    <article class="card card-basic level-3">
+                        <div class="card-header">
+                            <h3 class="card-title">Tablet Plus</h3>
+                            <span class="badge badge-sale">Oferta</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Perfecta para entretenimiento</p>
+                            <p class="price">$499</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-success btn-sm">Comprar</button>
+                        </div>
+                    </article>
+
+                    <article class="card card-premium level-1">
+                        <div class="card-header">
+                            <h3 class="card-title">Smartwatch Pro</h3>
+                            <span class="badge badge-new">Nuevo</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Monitoriza tu salud y actividad</p>
+                            <p class="price">$349</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-md">Comprar</button>
+                        </div>
+                    </article>
+
+                    <article class="card card-basic level-2">
+                        <div class="card-header">
+                            <h3 class="card-title">Auriculares Wireless</h3>
+                            <span class="badge badge-hot">Popular</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Sonido de alta calidad</p>
+                            <p class="price">$199</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary btn-md">Comprar</button>
+                        </div>
+                    </article>
+
+                    <article class="card card-premium level-3">
+                        <div class="card-header">
+                            <h3 class="card-title">Cámara Digital</h3>
+                            <span class="badge badge-sale">Oferta</span>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Captura momentos increíbles</p>
+                            <p class="price">$799</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-success btn-lg">Comprar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">¿Por qué elegirnos?</h2>
+                
+                <div class="feature-list">
+                    <div class="feature-item item-1">
+                        <div class="feature-icon">🚚</div>
+                        <h3>Envío Gratis</h3>
+                        <p>En pedidos superiores a $50</p>
+                    </div>
+                    
+                    <div class="feature-item item-2">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Pago Seguro</h3>
+                        <p>Tus datos están protegidos</p>
+                    </div>
+                    
+                    <div class="feature-item item-3">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Entrega Rápida</h3>
+                        <p>Recibe en 24-48 horas</p>
+                    </div>
+                    
+                    <div class="feature-item item-4">
+                        <div class="feature-icon">💎</div>
+                        <h3>Calidad Premium</h3>
+                        <p>Productos de primera calidad</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <div class="container">
+                <h2>Suscríbete a nuestro Newsletter</h2>
+                <form class="newsletter-form">
+                    <input type="email" class="input-text" placeholder="Tu email">
+                    <button class="btn btn-primary">Suscribirse</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sobre Nosotros</h3>
+                    <p>TechShop es tu tienda de confianza para productos tecnológicos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <p>Redes sociales: Facebook | Twitter | Instagram</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TechShop. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+

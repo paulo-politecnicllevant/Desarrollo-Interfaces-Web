@@ -1,0 +1,53 @@
+.header {
+  background-color: $dark-color;
+  padding: $spacing-lg 0;
+  box-shadow: $shadow-md;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  .nav {
+    // TODO: inclou el mixin per direccionar els elements horizonrtalment.
+    // COMPLETAR AQUÍ
+    justify-content: space-between;
+    
+    .logo {
+      color: $white;
+      font-size: $font-size-xl;
+      margin: 0;
+    }
+    
+    .nav-list {
+      // TODO: inclou el mixin per direccionar els elements horizonrtalment.
+      // COMPLETAR AQUÍ
+      gap: $spacing-lg;
+      
+      .nav-item {
+        .nav-link {
+          color: $light-color;
+          font-weight: 500;
+          padding: $spacing-sm $spacing-md;
+          border-radius: $border-radius-sm;
+          
+          &:hover {
+            background-color: color-alpha($white, 0.1);
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  
+  @include responsive(tablet) {
+    .nav {
+      flex-direction: column;
+      gap: $spacing-md;
+      
+      .nav-list {
+        flex-direction: column;
+        gap: $spacing-sm;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,10 @@
+.products {
+  padding: spacing(4) 0;
+  background-color: $bg-primary;
+  
+  .product-grid {
+    @include grid-layout(3, $spacing-xl);
+    margin-top: spacing(2);
+  }
+}
+

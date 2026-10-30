@@ -1,0 +1,39 @@
+.newsletter {
+  background: linear-gradient(135deg, $dark-color, lighten($dark-color, 10%));
+  padding: spacing(3) 0;
+  text-align: center;
+  color: $white;
+  
+  h2 {
+    color: $white;
+    margin-bottom: spacing(2);
+  }
+  
+  .newsletter-form {
+    @include flex-center(row);
+    gap: $spacing-md;
+    max-width: 600px;
+    margin: 0 auto;
+    
+    .input-text {
+      flex: 1;
+      padding: $spacing-md;
+      border: none;
+      border-radius: $border-radius-md;
+      font-size: $font-size-base;
+      
+      &:focus {
+        outline: 2px solid $primary-color;
+      }
+    }
+    
+    @include responsive(mobile) {
+      flex-direction: column;
+      
+      .input-text {
+        width: 100%;
+      }
+    }
+  }
+}
+

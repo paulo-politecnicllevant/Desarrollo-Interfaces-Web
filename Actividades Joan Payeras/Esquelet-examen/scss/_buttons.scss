@@ -1,0 +1,44 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+// TODO: Completar el bucle per crear la classe .btn-#{$name} iterant sobre el mapa $theme-colors. S'ha d'utilitzar el @include button-style con el color y text-contrast($color)
+// COMPLETAR AQUÍ
+
+
+// TODO: Crear un bucle per crear botons de diferentes dimensions. Rls valors vendran detallats per la variable $sizes. S'ha de crear un .btn-#{$size-name} per cada tamany. Utilitza el padding Y X, i un font-size per fer una dimensió com es detalla:
+// sm: padding $spacing-xs $spacing-md, font-size $font-size-sm
+// md: padding $spacing-sm $spacing-lg, font-size $font-size-base
+// lg: padding $spacing-md $spacing-xl, font-size $font-size-lg
+// COMPLETAR AQUÍ
+
+
+.btn-outline {
+  @each $name, $color in $theme-colors {
+    &-#{$name} {
+      background-color: transparent;
+      color: $color;
+      border: 2px solid $color;
+      padding: $spacing-sm $spacing-lg;
+      border-radius: $border-radius-md;
+      transition: all $transition-normal;
+      cursor: pointer;
+      
+      &:hover {
+        background-color: $color;
+        color: text-contrast($color);
+      }
+    }
+  }
+}
+
