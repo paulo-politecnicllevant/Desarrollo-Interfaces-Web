@@ -13,7 +13,19 @@
 // sale: animation bounce 1s infinite
 
 // COMPLETAR AQUÍ
+$badge-types: (
+  "new": animation pulse 2s infinite,
+  "hot": animation shake 0.5s infinite,
+  "sale": animation bounce 1s infinite
+);
 
+@each $type, $props in $badge-types{
+  &--#{$type}{
+    @each $prop, $value in $props{
+      #{$prop}: #{$value};
+    }
+  }
+}
 
 @keyframes pulse {
   0%, 100% {

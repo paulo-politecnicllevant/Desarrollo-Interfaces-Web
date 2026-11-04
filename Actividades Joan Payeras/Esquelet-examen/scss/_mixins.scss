@@ -1,6 +1,10 @@
-// TODO: Completa el mixin utilitzanbt flex, amb el justificat al centre, l'alineació dels objectes al centre i la direcció per paràmetre, on per defecte serà en fila.
+// TODO: Completa el mixin utilitzanbt flex, amb el justificat al centre, l'alineació dels objectes al centre 
+// i la direcció per paràmetre, on per defecte serà en fila.
 @mixin flex-center($direction: row) {
   // COMPLETAR AQUÍ
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @mixin button-style($bg-color, $text-color: $white, $hover-darken: 10%) {
@@ -29,8 +33,9 @@
   // COMPLETAR AQUÍ
 }
 
-// TODO: Completar el mixin per crear targetes amb un color de fons blanc, el padding, on per defecte serà lg i la ombra, on per defecte serà md.
-@mixin card($padding, $shadow) {
+// TODO: Completar el mixin per crear targetes amb un color de fons blanc, el padding, on per defecte serà lg i 
+// la ombra, on per defecte serà md.
+@mixin card($padding: $spacing-lg, $shadow: $shadow-md) {
   // COMPLETAR AQUÍ
   border-radius: $border-radius-lg;
   transition: transform $transition-normal;
@@ -39,6 +44,8 @@
     transform: translateY(-5px);
     box-shadow: $shadow-lg;
   }
+
+  background-color: white;
 }
 
 @mixin text-truncate($lines: 1) {
@@ -55,9 +62,17 @@
   }
 }
 
-// TODO: Completar el mixin per crear el grid responsiu. El grid ha de ser de 3 columnes per defecte i l'espaiat entre ells, per defecte, ha de ser lg. A més, si el breakpoint és tablet, el grid ha de ser de 2 columnes i si el breakpoint és mòbil, el grid ha de ser de 1 columna.
+// TODO: Completar el mixin per crear el grid responsiu. El grid ha de ser de 3 columnes per defecte i l'espaiat entre 
+// ells, per defecte, ha de ser lg. A més, si el breakpoint és tablet, el grid ha de ser de 2 columnes i si el 
+// breakpoint és mòbil, el grid ha de ser de 1 columna.
 @mixin grid-layout($columns: 3, $gap: $spacing-lg) {
   // COMPLETAR AQUÍ
+  display: grid;
+
+  @if($breakpoint-tablet){
+    
+  }
+  
 }
 
 @mixin overlay($opacity: 0.5) {

@@ -61,10 +61,10 @@ $theme-colors: (
 );
 
 $sizes: (
-  'sm': 0.875rem,
-  'md': 1rem,
-  'lg': 1.25rem
-);
+  "sm": (padding-y: $spacing-xs, padding-x: $spacing-md, font-size: $font-size-sm),
+  "md": (padding-y: $spacing-sm, padding-x: $spacing-lg, font-size: $font-size-base),
+  "lg": (padding-y: $spacing-md, padding-x: $spacing-xl, font-size: $font-size-lg),
+);   
 
 $badge-types: (
   'new': $info-color,
