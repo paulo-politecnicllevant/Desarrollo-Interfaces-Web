@@ -1,10 +1,9 @@
-// TODO: Completa el mixin utilitzanbt flex, amb el justificat al centre, l'alineació dels objectes al centre 
-// i la direcció per paràmetre, on per defecte serà en fila.
+// TODO: Completa el mixin utilitzanbt flex, amb el justificat al centre, l'alineació dels objectes al centre i la direcció per paràmetre, on per defecte serà en fila.
 @mixin flex-center($direction: row) {
-  // COMPLETAR AQUÍ
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: $direction;
 }
 
 @mixin button-style($bg-color, $text-color: $white, $hover-darken: 10%) {
@@ -29,23 +28,41 @@
 }
 
 // TODO: Completa el mixin per aplicar media queries segons el breakpoint. A més, cada punt de ruptura ha de tenir un contingut obligatori a rellenar.
+// Cada breakpoint lleva su @content (el contenido que se pasa al incluir el mixin)
 @mixin responsive($breakpoint) {
-  // COMPLETAR AQUÍ
+  @if $breakpoint == mobile {
+    @media (max-width: $breakpoint-mobile) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (max-width: $breakpoint-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (max-width: $breakpoint-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == wide {
+    @media (max-width: $breakpoint-wide) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint '#{$breakpoint}' no reconocido";
+  }
 }
 
-// TODO: Completar el mixin per crear targetes amb un color de fons blanc, el padding, on per defecte serà lg i 
-// la ombra, on per defecte serà md.
+// TODO: Completar el mixin per crear targetes amb un color de fons blanc, el padding, on per defecte serà lg i la ombra, on per defecte serà md.
 @mixin card($padding: $spacing-lg, $shadow: $shadow-md) {
-  // COMPLETAR AQUÍ
+  background-color: $white;
+  padding: $padding;
+  box-shadow: $shadow;
   border-radius: $border-radius-lg;
   transition: transform $transition-normal;
-  
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: $shadow-lg;
   }
-
-  background-color: white;
 }
 
 @mixin text-truncate($lines: 1) {
@@ -62,17 +79,20 @@
   }
 }
 
-// TODO: Completar el mixin per crear el grid responsiu. El grid ha de ser de 3 columnes per defecte i l'espaiat entre 
-// ells, per defecte, ha de ser lg. A més, si el breakpoint és tablet, el grid ha de ser de 2 columnes i si el 
-// breakpoint és mòbil, el grid ha de ser de 1 columna.
+// TODO: Completar el mixin per crear el grid responsiu. El grid ha de ser de 3 columnes per defecte i l'espaiat entre ells, per defecte, ha de ser lg. A més, si el breakpoint és tablet, el grid ha de ser de 2 columnes i si el breakpoint és mòbil, el grid ha de ser de 1 columna.
 @mixin grid-layout($columns: 3, $gap: $spacing-lg) {
-  // COMPLETAR AQUÍ
   display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
 
-  @if($breakpoint-tablet){
-    
+  @include responsive(tablet) {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
+
+  // mobile va después de tablet para que gane al ser más estrecho
+  @include responsive(mobile) {
+    grid-template-columns: 1fr;
+  }
 }
 
 @mixin overlay($opacity: 0.5) {

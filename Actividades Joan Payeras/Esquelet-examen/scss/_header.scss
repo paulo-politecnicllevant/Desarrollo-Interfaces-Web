@@ -9,7 +9,13 @@
   .nav {
     // TODO: inclou el mixin per direccionar els elements horizonrtalment.
     // COMPLETAR AQUÍ
+    @include flex-center(row);
     justify-content: space-between;
+
+    .nav-list {
+      @include flex-center(row);
+      gap: $spacing-lg;
+    }
     
     .logo {
       color: $white;
@@ -20,6 +26,7 @@
     .nav-list {
       // TODO: inclou el mixin per direccionar els elements horizonrtalment.
       // COMPLETAR AQUÍ
+      @include flex-center(row);
       gap: $spacing-lg;
       
       .nav-item {

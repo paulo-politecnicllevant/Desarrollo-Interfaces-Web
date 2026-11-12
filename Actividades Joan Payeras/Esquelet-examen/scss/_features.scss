@@ -1,19 +1,14 @@
 .features {
-  padding: spacing(4) 0;
-  background-color: $bg-secondary;
-  
   .feature-list {
-    // TODO: Crida al mixin grid-layout amb 4 columnes i espaiat lg.
-    // COMPLETAR AQUÍ
+    @include grid-layout(4, $spacing-lg);
     margin-top: spacing(2);
-    
+
     .feature-item {
-      // TODO: Crida al mixin card amb un espaiat lg i una ombra sm.
-      // COMPLETAR AQUÍ
+      @include card($spacing-lg, $shadow-sm);
       text-align: center;
-      
+
       .feature-icon {
-        // TODO: Dona un valor al font-size fent una crida a la funció rem(valor). 
+        font-size: rem(48px);
         margin-bottom: $spacing-md;
       }
       

@@ -1,1 +1,8 @@
 // Importa els distints arxius partials aqui. Ordre...?
+// main.scss
+@import 'variables';   // 1. variables (no dependen de nada)
+@import 'functions';   // 2. funciones (usan variables)
+@import 'mixins';      // 3. mixins (usan variables y funciones)
+@import 'base';        // 4. reset, body, tipografía, container...
+@import 'layout';      // 5. header, hero, features, footer, newsletter
+@import 'components';  // 6. botones, cards, badges...

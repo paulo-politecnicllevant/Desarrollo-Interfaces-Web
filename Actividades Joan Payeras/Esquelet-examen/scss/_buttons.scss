@@ -12,26 +12,33 @@
   }
 }
 
-// TODO: Completar el bucle per crear la classe .btn-#{$name} iterant sobre el mapa $theme-colors. S'ha d'utilitzar el 
-// @include button-style con el color y text-contrast($color)
+// TODO: Completar el bucle per crear la classe .btn-#{$name} iterant sobre el mapa $theme-colors. S'ha d'utilitzar el @include button-style con el color y text-contrast($color)
 // COMPLETAR AQUÍ
-@each $name, $color in $theme-colors{
-  .btn-#{$name}{
+// Colores
+@each $name, $color in $theme-colors {
+  .btn-#{$name} {
     @include button-style($color, text-contrast($color));
   }
 }
 
-
-// TODO: Crear un bucle per crear botons de diferentes dimensions. Rls valors vendran detallats per la variable $sizes.
-// S'ha de crear un .btn-#{$size-name} per cada tamany. Utilitza el padding Y X, i un font-size per fer una dimensió com es detalla:
+// TODO: Crear un bucle per crear botons de diferentes dimensions. Rls valors vendran detallats per la variable $sizes. S'ha de crear un .btn-#{$size-name} per cada tamany. Utilitza el padding Y X, i un font-size per fer una dimensió com es detalla:
 // sm: padding $spacing-xs $spacing-md, font-size $font-size-sm
 // md: padding $spacing-sm $spacing-lg, font-size $font-size-base
 // lg: padding $spacing-md $spacing-xl, font-size $font-size-lg
 // COMPLETAR AQUÍ
-@each $size-name, $size-props in $sizes{
-  .btn-#{$size-name}{
-    padding: map-get($map: $size-props, $key: padding-y) map-get($map: $size-props, $key: padding-x);
-    font-size: map-get($size-props, font-size);
+// Tamaños (van DESPUÉS de los colores para que su padding sobrescriba el de button-style)
+@each $size-name, $size-value in $sizes {
+  .btn-#{$size-name} {
+    @if $size-name == 'sm' {
+      padding: $spacing-xs $spacing-md;
+      font-size: $font-size-sm;
+    } @else if $size-name == 'md' {
+      padding: $spacing-sm $spacing-lg;
+      font-size: $font-size-base;
+    } @else if $size-name == 'lg' {
+      padding: $spacing-md $spacing-xl;
+      font-size: $font-size-lg;
+    }
   }
 }
 

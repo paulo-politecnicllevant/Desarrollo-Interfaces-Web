@@ -13,16 +13,17 @@
 // sale: animation bounce 1s infinite
 
 // COMPLETAR AQUÍ
-$badge-types: (
-  "new": animation pulse 2s infinite,
-  "hot": animation shake 0.5s infinite,
-  "sale": animation bounce 1s infinite
-);
+@each $type, $color in $badge-types {
+  .badge-#{$type} {
+    background-color: $color;
+    color: text-contrast($color);
 
-@each $type, $props in $badge-types{
-  &--#{$type}{
-    @each $prop, $value in $props{
-      #{$prop}: #{$value};
+    @if $type == 'new' {
+      animation: pulse 2s infinite;
+    } @else if $type == 'hot' {
+      animation: shake 0.5s infinite;
+    } @else if $type == 'sale' {
+      animation: bounce 1s infinite;
     }
   }
 }

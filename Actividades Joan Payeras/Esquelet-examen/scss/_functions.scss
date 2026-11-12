@@ -1,11 +1,15 @@
+@use "sass:math";
+
 // TODO: Completar la @function rem, que ha de retornar pixels a rem. Un rem equival a 16 pixels.
+// px -> rem (1rem = 16px). Se usa así: rem(48px)
 @function rem($pixels) {
-  // COMPLETAR AQUÍ
+  @return math.div($pixels, 16px) * 1rem;
 }
 
 // TODO: Funció que ha de retornar l'espaiat mitja multiplicat per un multiplicador. Completar la @function spacing
+// Espaciado medio ($spacing-md = 1rem) multiplicado
 @function spacing($multiplier) {
-  // COMPLETAR AQUÍ
+  @return $spacing-md * $multiplier;
 }
 
 
@@ -32,7 +36,7 @@
 
 // TODO: Crea una funció que retorni un percentatge.
 @function percentage-calc($value, $total) {
-  // COMPLETAR AQUÍ
+  @return math.div($value, $total) * 100%;
 }
 
 @function invert-color($color) {
