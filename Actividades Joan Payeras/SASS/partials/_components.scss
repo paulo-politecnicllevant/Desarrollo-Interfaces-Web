@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: $color-text-primary;
+  background: $color-bg-secondary;
+  line-height: 1.6;
+}
+
+section {
+  padding: $padding-xlarge 0;
+}
+
+.header {
+  @include flex($justify: space-between, $align: center);
+  height: $header-height;
+  padding: 0 $padding-large;
+  background: $color-bg-primary;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  .logo {
+    img {
+      @include imatge($width: auto, $height: $logo-height);
+      max-height: $logo-height;
+    }
+  }
+  
+  .navegacio {
+    @include flex($gap: $base-gap * 0.5);
+    
+    .enllaç {
+      padding: $padding-small ($padding-medium);
+      color: $color-text-secondary;
+      @include link-reset;
+      position: relative;
+      transition: color $transition-base;
+      font-weight: $font-weight-medium;
+      border-radius: $border-radius-medium;
+      
+      &:hover {
+        color: $color-primary;
+        background: $color-bg-accent;
+      }
+      
+      &.actiu {
+        color: $color-primary;
+        font-weight: $font-weight-semibold;
+        background: $color-bg-accent;
+      }
+    }
+  }
+}
+
+.galeria {
+  @include contenidor {
+    @include flex($justify: center, $gap: $base-gap);
+  }
+  
+  .galeria-item {
+    width: 33%;
+    
+    .imatge-container {
+      @include overflow-hidden;
+      border-radius: $border-radius-large;
+      box-shadow: $shadow-base;
+      transition: all $transition-base;
+      
+      img {
+        @include imatge {
+          transition: transform $transition-base;
+        }
+      }
+      
+      &:hover {
+        box-shadow: $shadow-lg;
+        
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+    
+    .titol {
+      @include text-centrat;
+      margin-top: $margin-medium;
+      color: $color-text-primary;
+      font-size: $font-size-medium;
+      font-weight: $font-weight-semibold;
+    }
+  }
+}
+
+.equip {
+  @include contenidor {
+    @include flex($justify: center, $gap: $base-gap);
+  }
+  
+  .membre-card {
+    @include card("elevated", true, $padding-large) {
+      @include text-centrat;
+      width: $card-width;
+    }
+    
+    .avatar {
+      @include imatge($width: $avatar-size, $height: $avatar-size, $object-fit: cover);
+      border-radius: $border-radius-round;
+      margin: 0 auto $margin-large;
+      border: $border-width-thick * 2 $border-style $color-primary-light;
+    }
+    
+    .nom {
+      color: $color-text-primary;
+      font-size: $font-size-large;
+      font-weight: $font-weight-bold;
+      margin-bottom: $margin-small;
+    }
+    
+    .carrec {
+      color: $color-text-secondary;
+      font-size: $font-size-base;
+      margin-bottom: $margin-large;
+    }
+    
+    .xarxes {
+      @include flex($justify: center, $gap: $base-gap * 0.5);
+      
+      .xarxa-enllaç {
+        @include flex($justify: center, $align: center);
+        display: inline-flex;
+        width: $icon-size;
+        height: $icon-size;
+        border-radius: $border-radius-medium;
+        background: $color-bg-accent;
+        color: $color-primary;
+        @include link-reset;
+        transition: all $transition-fast;
+        font-weight: $font-weight-semibold;
+        font-size: $font-size-small;
+        
+        @include hover-elevacio(2px, $shadow-md) {
+          background: $color-primary;
+          color: $color-bg-primary;
+        }
+      }
+    }
+  }
+}
+
+
+
+.formulari {
+  @include card("elevated", false, $padding-large) {
+    max-width: $base-size * 40;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: $color-text-primary;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
+    @include text-centrat;
+    margin-bottom: $margin-small;
+  }
+  
+  .subtitol {
+    color: $color-text-secondary;
+    font-size: $font-size-medium;
+    @include text-centrat;
+    margin-bottom: $margin-xlarge;
+  }
+  
+  .camp {
+    margin-bottom: $margin-large;
+    
+    label {
+      display: block;
+      font-weight: $font-weight-semibold;
+      margin-bottom: $margin-small;
+      color: $color-text-primary;
+      font-size: $font-size-base;
+    }
+    
+    input,
+    textarea {
+      @include input-estil {
+        background: $color-bg-secondary;
+        
+        &::placeholder {
+          color: $color-text-light;
+        }
+      }
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: $base-size * 6;
+    }
+  }
+  
+  .boto-enviar {
+    @include boto("primary", "large", true) {
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+  }
+}
+
+.targeta-producte {
+  @include card("gradient", false, $padding-large) {
+    max-width: $base-size * 50;
+    margin: 0 auto;
+    @include text-centrat;
+    border: $border-width-thick $border-style $color-primary;
+  }
+  
+  .titol {
+    color: $color-primary-dark;
+    font-size: $font-size-xlarge;
+    font-weight: $font-weight-bold;
+    margin-bottom: $margin-medium;
+  }
+  
+  .descripcio {
+    color: $color-text-secondary;
+    font-size: $font-size-medium;
+    margin-bottom: $margin-large;
+  }
+  
+  .preu {
+    font-weight: $font-weight-bold;
+    color: $color-secondary-dark;
+    font-size: $font-size-xlarge * 1.5;
+    margin-bottom: $margin-large;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .boto-compra {
+    @include boto("accent", "large", false) {
+      transform: translateY(-2px);
+      box-shadow: $shadow-lg;
+    }
+    display: inline-block;
+  }
+}

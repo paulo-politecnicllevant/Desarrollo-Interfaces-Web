@@ -1,0 +1,151 @@
+
+@function calcular-spacing-valor($nivel) {
+  @if $nivel == 0 { @return 0; }
+  @else if $nivel == 1 { @return 0.25rem; }
+  @else if $nivel == 2 { @return 0.5rem; }
+  @else if $nivel == 3 { @return 0.75rem; }
+  @else if $nivel == 4 { @return 1rem; }
+  @else if $nivel == 5 { @return 1.5rem; }
+  @else if $nivel == 6 { @return 2rem; }
+  @else if $nivel == 7 { @return 3rem; }
+  @else if $nivel == 8 { @return 4rem; }
+  @return 0;
+}
+
+
+@function calcular-font-size($nivel) {
+  @if type-of($nivel) != number {
+    @warn "calcular-font-size(): El paràmetre $nivel ha de ser un número. S'ha rebut: #{type-of($nivel)}. Es retorna 1rem per defecte.";
+    @return 1rem;
+  }
+  
+  @if $nivel != round($nivel) {
+    @warn "calcular-font-size(): El paràmetre $nivel ha de ser un número enter. S'ha rebut: #{$nivel}. Es retorna 1rem per defecte.";
+    @return 1rem;
+  }
+  
+  $escala: 1.25;
+  $nivel-max: 5;
+  $nivel-min: -3;
+  
+  @if $nivel > $nivel-max {
+    @warn "calcular-font-size(): El nivell #{$nivel} supera el màxim permès (#{$nivel-max}). S'utilitzarà el nivell #{$nivel-max}.";
+    $nivel: $nivel-max;
+  }
+  
+  @if $nivel < $nivel-min {
+    @warn "calcular-font-size(): El nivell #{$nivel} és inferior al mínim permès (#{$nivel-min}). S'utilitzarà el nivell #{$nivel-min}.";
+    $nivel: $nivel-min;
+  }
+  
+  $resultat: $base-size;
+  
+  @if $nivel == 0 {
+    $resultat: $base-size;
+  } @else if $nivel > 0 {
+    @if $nivel == 1 {
+      $resultat: $base-size * $escala;
+    } @else if $nivel == 2 {
+      $resultat: $base-size * $escala * $escala;
+    } @else if $nivel == 3 {
+      $resultat: $base-size * $escala * $escala * $escala;
+    } @else if $nivel == 4 {
+      $resultat: $base-size * $escala * $escala * $escala * $escala;
+    } @else if $nivel == 5 {
+      $resultat: $base-size * $escala * $escala * $escala * $escala * $escala;
+    }
+  } @else {
+    @if $nivel == -1 {
+      $resultat: $base-size / $escala;
+    } @else if $nivel == -2 {
+      $resultat: $base-size / ($escala * $escala);
+    } @else if $nivel == -3 {
+      $resultat: $base-size / ($escala * $escala * $escala);
+    }
+  }
+  
+  $resultat: round($resultat * 100) / 100;
+  
+  @return $resultat;
+}
+
+
+@function ajustar-color($color-base, $variant) {
+  @if type-of($color-base) != color {
+    @error "ajustar-color(): El paràmetre $color-base ha de ser un color vàlid. S'ha rebut: #{type-of($color-base)}";
+  }
+  
+  @if type-of($variant) != string {
+    @error "ajustar-color(): El paràmetre $variant ha de ser una cadena de text. S'ha rebut: #{type-of($variant)}";
+  }
+  
+  $resultat: null;
+  
+  @if $variant == "dark" {
+    $resultat: darken($color-base, 15%);
+  } @else if $variant == "darker" {
+    $resultat: darken($color-base, 25%);
+  } @else if $variant == "light" {
+    $resultat: lighten($color-base, 20%);
+  } @else if $variant == "lighter" {
+    $resultat: lighten($color-base, 35%);
+  } @else if $variant == "muted" {
+    $resultat: desaturate($color-base, 30%);
+  } @else if $variant == "vibrant" {
+    $resultat: saturate($color-base, 20%);
+  } @else {
+    @error "ajustar-color(): La variant '#{$variant}' no és vàlida. Variants disponibles: 'dark', 'darker', 'light', 'lighter', 'muted', 'vibrant'.";
+  }
+  
+  @return $resultat;
+}
+
+
+@function calcular-spacing($mida, $dispositiu) {
+  $valor-base: null;
+  $multiplicador: null;
+  
+  $mida-valida: false;
+  @if $mida == "small" or $mida == "medium" or $mida == "large" or $mida == "xlarge" {
+    $mida-valida: true;
+  }
+  
+  @if not $mida-valida {
+    @warn "calcular-spacing(): La mida '#{$mida}' no és vàlida. S'utilitzarà 1rem per defecte. Mides disponibles: 'small', 'medium', 'large', 'xlarge'.";
+    @return 1rem;
+  }
+  
+  $dispositiu-valid: false;
+  @if $dispositiu == "mobile" or $dispositiu == "tablet" or $dispositiu == "desktop" {
+    $dispositiu-valid: true;
+  }
+  
+  @if not $dispositiu-valid {
+    @warn "calcular-spacing(): El dispositiu '#{$dispositiu}' no és vàlid. S'utilitzarà 1rem per defecte. Dispositius disponibles: 'mobile', 'tablet', 'desktop'.";
+    @return 1rem;
+  }
+  
+  @if $mida == "small" {
+    $valor-base: 0.5rem;
+  } @else if $mida == "medium" {
+    $valor-base: 1rem;
+  } @else if $mida == "large" {
+    $valor-base: 2rem;
+  } @else if $mida == "xlarge" {
+    $valor-base: 3rem;
+  }
+  
+  @if $dispositiu == "mobile" {
+    $multiplicador: 0.75;
+  } @else if $dispositiu == "tablet" {
+    $multiplicador: 1;
+  } @else if $dispositiu == "desktop" {
+    $multiplicador: 1.25;
+  }
+  
+  $resultat: $valor-base * $multiplicador;
+  
+  $resultat: round($resultat * 100) / 100;
+  
+  @return $resultat;
+}

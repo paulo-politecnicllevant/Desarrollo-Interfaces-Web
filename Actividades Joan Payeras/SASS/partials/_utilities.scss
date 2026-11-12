@@ -1,0 +1,290 @@
+
+
+@for $i from 0 through 8 {
+  .m-#{$i} {
+    margin: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .p-#{$i} {
+    padding: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .mt-#{$i} {
+    margin-top: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .mr-#{$i} {
+    margin-right: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .mb-#{$i} {
+    margin-bottom: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .ml-#{$i} {
+    margin-left: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .pt-#{$i} {
+    padding-top: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .pr-#{$i} {
+    padding-right: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .pb-#{$i} {
+    padding-bottom: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .pl-#{$i} {
+    padding-left: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .mx-#{$i} {
+    margin-left: calcular-spacing-valor($i);
+    margin-right: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .my-#{$i} {
+    margin-top: calcular-spacing-valor($i);
+    margin-bottom: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .px-#{$i} {
+    padding-left: calcular-spacing-valor($i);
+    padding-right: calcular-spacing-valor($i);
+  }
+}
+
+@for $i from 0 through 8 {
+  .py-#{$i} {
+    padding-top: calcular-spacing-valor($i);
+    padding-bottom: calcular-spacing-valor($i);
+  }
+}
+
+
+@include generar-columnes();
+
+@media (min-width: 640px) {
+  @include generar-columnes("sm-");
+}
+
+@media (min-width: 768px) {
+  @include generar-columnes("md-");
+}
+
+@media (min-width: 1024px) {
+  @include generar-columnes("lg-");
+}
+
+@media (min-width: 1280px) {
+  @include generar-columnes("xl-");
+}
+
+
+@each $nom-color, $valor-color in $paleta-colors {
+  .text-#{$nom-color} {
+    color: $valor-color;
+  }
+  
+  @each $variant in $variants-color {
+    .text-#{$nom-color}-#{$variant} {
+      color: ajustar-color($valor-color, $variant);
+    }
+  }
+}
+
+@each $nom-color, $valor-color in $paleta-colors {
+  .bg-#{$nom-color} {
+    background-color: $valor-color;
+  }
+  
+  @each $variant in $variants-color {
+    .bg-#{$nom-color}-#{$variant} {
+      background-color: ajustar-color($valor-color, $variant);
+    }
+  }
+}
+
+@each $nom-color, $valor-color in $paleta-colors {
+  .border-#{$nom-color} {
+    border-color: $valor-color;
+  }
+  
+  @each $variant in $variants-color {
+    .border-#{$nom-color}-#{$variant} {
+      border-color: ajustar-color($valor-color, $variant);
+    }
+  }
+}
+
+@each $nom-color, $valor-color in $paleta-colors {
+  .hover-bg-#{$nom-color} {
+    transition: background-color 0.2s ease;
+    
+    &:hover {
+      background-color: $valor-color;
+    }
+  }
+}
+
+
+@each $nom, $nivel in $mides-text {
+  .text-#{$nom} {
+    font-size: calcular-font-size($nivel);
+  }
+}
+
+@each $nom, $pes in $pesos-font {
+  .font-#{$nom} {
+    font-weight: $pes;
+  }
+}
+
+@each $heading, $props in $headings {
+  .#{$heading} {
+    font-size: calcular-font-size(map-get($props, "size"));
+    font-weight: map-get($props, "weight");
+    line-height: map-get($props, "line-height");
+  }
+}
+
+
+@each $direccio, $transforms in $direccions-fade {
+  @keyframes fadeIn#{$direccio} {
+    from {
+      opacity: 0;
+      transform: nth($transforms, 1);
+    }
+    to {
+      opacity: 1;
+      transform: nth($transforms, 2);
+    }
+  }
+}
+
+@for $i from 1 through length($intensitats-pulse) {
+  $escala: nth($intensitats-pulse, $i);
+  
+  @keyframes pulse-#{$i} {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale($escala);
+    }
+  }
+}
+
+@each $direccio, $transforms in $direccions-fade {
+  @each $nom-duracio, $duracio in $duracions {
+    .animate-fadeIn#{$direccio}-#{$nom-duracio} {
+      animation: fadeIn#{$direccio} $duracio ease-out;
+    }
+  }
+}
+
+@for $i from 1 through length($intensitats-pulse) {
+  .animate-pulse-#{$i} {
+    animation: pulse-#{$i} 1s ease-in-out infinite;
+  }
+}
+
+@each $direccio, $transforms in $direccions-fade {
+  .animate-fadeIn#{$direccio} {
+    animation: fadeIn#{$direccio} 0.6s ease-out;
+  }
+}
+
+
+$displays: (block, inline, inline-block, flex, inline-flex, grid, inline-grid, none, contents, flow-root);
+
+@each $display in $displays {
+  .d-#{$display} {
+    display: $display;
+  }
+}
+
+$positions: (static, relative, absolute, fixed, sticky);
+$position-values: (0, auto);
+$position-sides: (top, right, bottom, left);
+
+@each $position in $positions {
+  .position-#{$position} {
+    position: $position;
+  }
+}
+
+@each $side in $position-sides {
+  @each $value in $position-values {
+    .#{$side}-#{$value} {
+      #{$side}: $value;
+    }
+  }
+}
+
+$text-aligns: (left, center, right, justify, start, end);
+
+@each $align in $text-aligns {
+  .text-#{$align} {
+    text-align: $align;
+  }
+}
+
+$opacities: (0, 25, 50, 75, 100);
+
+@each $opacity in $opacities {
+  .opacity-#{$opacity} {
+    opacity: $opacity / 100;
+  }
+}
+
+$cursors: (
+  auto,
+  default,
+  pointer,
+  wait,
+  text,
+  move,
+  not-allowed,
+  help,
+  grab,
+  grabbing,
+  zoom-in,
+  zoom-out,
+  crosshair,
+  col-resize,
+  row-resize
+);
+
+@each $cursor in $cursors {
+  .cursor-#{$cursor} {
+    cursor: $cursor;
+  }
+}
