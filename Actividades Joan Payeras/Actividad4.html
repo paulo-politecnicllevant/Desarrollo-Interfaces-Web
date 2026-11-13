@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <title>Activitat 4 · Formulari</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+  <form>
+    <h1>Inscripció al taller de Tailwind</h1>
+    <p>Omple les dades i et confirmarem la plaça per correu.</p>
+
+    <div>
+      <label for="nom">Nom complet</label>
+      <input id="nom" type="text" placeholder="Marta Pons" />
+    </div>
+
+    <div>
+      <label for="correu">Correu electrònic</label>
+      <input id="correu" type="email" placeholder="marta@exemple.cat" />
+    </div>
+
+    <div>
+      <label for="cp">Codi postal</label>
+      <input id="cp" type="text" placeholder="07001" />
+    </div>
+
+    <div>
+      <label for="comentaris">Comentaris</label>
+      <textarea id="comentaris"></textarea>
+    </div>
+
+    <div>
+      <button type="submit">Envia</button>
+      <button type="reset">Esborra</button>
+    </div>
+  </form>
+</body>
+</html>
