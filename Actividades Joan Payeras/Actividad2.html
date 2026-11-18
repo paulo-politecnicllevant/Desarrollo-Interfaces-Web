@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ca">
 <head>
   <meta charset="UTF-8" />
@@ -6,32 +6,32 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <section>
+  <section class="p-8">
     <h2>Botons</h2>
-    <div>
-      <button>Desa</button>
-      <button>Cancel·la</button>
-      <button>Elimina</button>
-      <button>Següent</button>
+    <div class="flex flex-wrap gap-3">
+      <button class="rounded-md bg-indigo-600/70 px-4 py-2 text-white">Desa</button>
+      <button class="rounded-md border border-slate-300 bg-white px-4 py-2 text-slate-700">Cancel·la</button>
+      <button class="rounded-md border-2 border-rose-600 bg-transparent px-4 py-2 text-rose-700">Elimina</button>
+      <button class="rounded-full px-4 py-2 ring-2 ring-indigo-500/40">Següent</button>
     </div>
   </section>
 
-  <section>
+  <section class="p-8">
     <h2>Etiquetes d'estat</h2>
-    <div>
-      <span>Actiu</span>
-      <span>Pendent</span>
-      <span>Error</span>
-      <span>Esborrany</span>
+    <div class="flex flex-wrap gap-3">
+      <span class="rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-0.5 text-emerald-700">Actiu</span>
+      <span class="rounded-full border border-amber-200 bg-amber-50 px-2.5 py-0.5 text-amber-700">Pendent</span>
+      <span class="rounded-full border border-rose-200 bg-rose-50 px-2.5 py-0.5 text-rose-700">Error</span>
+      <span class="rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-slate-700">Esborrany</span>
     </div>
   </section>
 
-  <section>
+  <section class="p-8">
     <h2>Caixes</h2>
-    <div>
-      <div>Caixa A</div>
-      <div>Caixa B</div>
-      <div>Caixa C</div>
+    <div class="flex flex-wrap gap-3">
+      <div class="rounded-xl border-2 border-dashed border-slate-300 p-4">Caixa A</div>
+      <div class="rounded-2xl border-2 border-dotted border-slate-300 p-4">Caixa B</div>
+      <div class="rounded-r-xl border-r-4 border-indigo-500 p-4">Caixa C</div>
     </div>
   </section>
 </body>
