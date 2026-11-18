@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Reservas · Casa Oliva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<header class="top"><a class="logo" href="index.html">Casa Oliva</a>
+<button class="burger" aria-expanded="false" aria-controls="nav" aria-label="Abrir o cerrar el menú"><span></span></button>
+<nav id="nav" aria-label="Principal"><a href="index.html">Inicio</a><a href="carta.html">Carta</a><a href="reservas.html" aria-current="page">Reservas</a><a href="sobre-nosotros.html">Sobre nosotros</a><a href="contacto.html">Contacto</a></nav></header>
+<p class="crumbs"><a href="index.html">Inicio</a> / Reservas</p><main><div class="w two"><div><h1>Reservas</h1><p>Elige día, hora y comensales. Te confirmaremos por email.</p><p>¿Más de 8 personas? Llama al 971 000 000.</p></div>
+<form data-ok="ok" aria-label="Formulario de reserva"><label for="n">Nombre</label><input id="n" required autocomplete="name">
+<label for="e">Email</label><input id="e" type="email" required autocomplete="email">
+<label for="t">Teléfono</label><input id="t" type="tel" inputmode="tel" required autocomplete="tel">
+<label for="d">Fecha</label><input id="d" type="date" required>
+<label for="h">Hora</label><select id="h" required><option value="">Elige una hora</option><option>13:30</option><option>14:30</option><option>20:30</option><option>21:30</option></select>
+<label for="p">Comensales</label><input id="p" type="number" min="1" max="8" value="2" required>
+<fieldset><legend>Zona</legend><label class="opt"><input type="radio" name="z" checked> Sala</label><label class="opt"><input type="radio" name="z"> Terraza</label></fieldset>
+<label for="c">Alergias o comentarios</label><textarea id="c" rows="3"></textarea>
+<label class="opt"><input type="checkbox" required> Acepto la política de privacidad</label><p><button class="btn" type="submit">Reservar mesa</button></p>
+<p id="ok" class="msg" role="status">Solicitud enviada. Te confirmaremos la reserva por email.</p></form></div></main>
+<footer><div class="w"><div><h3>Casa Oliva</h3><p>Cocina de brasa y huerta.<br>Carrer de l'Oliva, 12<br>Tel. 971 000 000</p></div>
+<div><h3>Horario</h3><p>Mar–dom: 13:00–16:00 y 20:00–23:30<br>Lunes cerrado</p></div>
+<div><h3>Páginas</h3><a href="index.html">Inicio</a><a href="carta.html">Carta</a><a href="reservas.html">Reservas</a><a href="sobre-nosotros.html">Sobre nosotros</a><a href="contacto.html">Contacto</a></div></div></footer>
+<button class="up" aria-label="Volver arriba">↑</button><script src="js/main.js"></script></body></html>
