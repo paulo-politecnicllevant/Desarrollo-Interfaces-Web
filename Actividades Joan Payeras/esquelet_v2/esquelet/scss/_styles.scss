@@ -1,0 +1,45 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+
+$color-blau: #3498db;
+$color-blauDarken: color.darken($color-blau, 20%);
+$color-blauLighten: color.lighten($color-blau, 15%);
+$color-blauSaturate: color.saturate($color-blau, 30%);
+$color-taronja: #FF5733;
+$color-blanc: #ffffff;
+
+$button-gruix: 2px solid;
+$button-colorGris: #95a5a6;
+
+//Actividad 2
+@mixin quadratOmbra($mida-costat, $color-fons, $blur){
+    width: $mida-costat;
+    height: $mida-costat;
+    background-color: $color-fons;
+    box-shadow: 0 0 $blur rgba(0, 0, 0, 0.5);
+}
+
+//Actividad 5
+$tipus-boto: (
+    'primary': (
+        background-color:$color-blau,
+        color: $color-blanc,
+        border: $button-gruix #2980b9,
+    ),
+    'secondary': (
+        background-color:$button-colorGris,
+        color: $color-blanc,
+        border: $button-gruix #7f8c8d,
+    ),
+    'success': (
+        background-color:#2ecc71,
+        color: $color-blanc,
+        border: $button-gruix #27ae60,
+    ),
+    'danger': (
+        background-color:#e74c3c,
+        color: $color-blanc,
+        border: $button-gruix #c0392b,
+    )
+)

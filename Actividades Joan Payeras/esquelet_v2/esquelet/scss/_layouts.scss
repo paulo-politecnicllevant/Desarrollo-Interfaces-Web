@@ -1,0 +1,29 @@
+@use 'sass:color';
+@use 'sass:math';
+@use 'sass:map';
+
+//Actividad 4
+
+@for $i from 1 through 10{
+    @if $i % 2 == 1{
+        background: linear-gradient(to right, $color-taronja, color.mix($color-taronja, $color-blau, $i * 10%));
+    }
+    @else if $i % 2 == 0{
+        background: radial-gradient($color-blau, color.mix($color-blau, $color-taronja, $i * 10%));
+    }
+}
+
+//Actividad 5
+@each $tipus, $botons in $tipus-boto {
+    @each $boto, $valor in $botons{
+        .btn-#{tipus}{
+            :hover{
+                @if $tipus == 'danger'{
+                    animation: pulse 1s infinite alternate;
+                }@else{
+                    background-color: color.darken($valor, 10%);
+                }
+            }
+        }
+    }
+}

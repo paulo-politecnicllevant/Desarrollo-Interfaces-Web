@@ -1,0 +1,130 @@
+*{
+   box-sizing: border-box;
+   border-radius: 5px;
+}
+
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 850px;
+  margin: 0;
+  font-size: 150%;
+}
+
+.box {
+  padding: 20px;
+  border-radius: 5px;
+  color: #444;
+  background: #ccc;
+}
+
+.box.a{
+   width: 350px;
+   height: 100px;
+   margin-right: 200px;
+   background-color: #ccc;
+
+}
+
+.box.b{
+   width: 100px;
+   height: 100px;
+   background-color: #444;
+   color: #fff;
+}
+
+.box.c{
+   width: 200px;
+   height: 200px;
+   background-color: #444;
+   color: #fff;
+}
+
+.box.d{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 450px;
+   height: 200px;
+   background-color: #444;
+   gap: 10px;
+}
+
+.box.e{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+}
+
+.box.f{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+
+}
+
+.box.g{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+}
+
+.box.k{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+}
+
+.box.l{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+}
+
+.box.m{
+   background-color: #ccc;
+   width: 125px;
+   height: 70px;
+}
+
+/*Formulario*/
+.box.n{
+   background-color: #444;
+   padding: 12px;
+   display: flex;
+   flex-direction: column;
+   border-radius: none;
+}
+
+.form-list{
+   display: flex;
+   flex-direction: column;
+   background-color:#ccc;
+   padding: 12px;
+   gap: 24px;
+   width: 650px;
+}
+
+li input{
+   height: 30px;
+}
+
+#name{
+   width: 550px;
+}
+
+#townborn{
+   width: 385px;
+}
+
+#email{
+   width: 470px;
+}
+
+button{
+   color: white;
+   background-color: #666;
+   align-self: flex-end;
+   margin-left: 560px
+}

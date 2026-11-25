@@ -1,0 +1,229 @@
+@charset "UTF-8";
+@import 'styles';
+@import 'layouts';
+/* EXERCICI 1 - VARIABLES (0,5 punts)
+Definiu les variables descrites en els comentaris següents i feu-les servir
+al llarg de TOT L'EXAMEN sempre que aparegui algun d'aquests colors.
+Per obtenir els colors derivats heu de fer servir darken(), lighten() i desaturate()
+o bé color.adjust() del mòdul sass:color (el resultat és el mateix).
+*/
+/* Blau: #3498db */
+/* Blau un 20 % més fosc */
+/* Blau un 15 % més clar */
+/* Blau dessaturat un 30 % */
+/* Taronja: #FF5733 */
+/* EXERCICI 2 - MIXIN (0,5 punts)
+2A. Definiu un mixin que creï un quadrat amb ombra. Ha d'acceptar tres paràmetres:
+la mida del costat, el color de fons i el desenfocament (blur) de l'ombra.
+L'ombra no té desplaçament i sempre és de color rgba(0, 0, 0, 0.5).
+*/
+.blau {
+  color: #3498db;
+}
+
+.blauDarken {
+  color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
+}
+
+.blauLighten {
+  color: rgb(116.9769874477, 184.9686192469, 230.5230125523);
+}
+
+.blauDesaturate {
+  color: rgb(87.85, 144.9158682635, 183.15);
+}
+
+/* 2B. Ús del mixin El mixin crearà un quadrat amb una ombra. Per això ha d'acceptar tres valors: la mida del costat, el color de fons, i la intensitat de l'ombra.
+ */
+div.smallSquare {
+  /* Feu servir el mixin per crear un quadrat de 100px amb color #2ecc71 i ombra de 10px */
+  /*  
+  width: 100px;
+  height: 100px;
+  background: #2ecc71;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  */
+  @include quadratOmbra(100px, 100px, #2ecc71, 10px);
+}
+
+div.largeSquare {
+  /* Feu servir el mixin per crear un quadrat de 200px amb color #e74c3c i ombra de 20px */
+  /*
+  width: 200px;
+  height: 200px;
+  background: #e74c3c;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  */
+  @include quadratOmbra(200px, 200px, #e74c3c, 20px);
+}
+
+/* EXERCICI 3 - NIAMENT (1 punt)
+Reproduïu l'estructura següent amb regles niades.
+Per a l'estat :hover feu servir el selector &.
+*/
+nav#menu {
+  display: flex;
+  justify-content: space-between;
+}
+nav#menu ul {
+  list-style: none;
+  padding: 0;
+}
+nav#menu ul li a {
+  color: rgb(116.9769874477, 184.9686192469, 230.5230125523);
+  text-decoration: none;
+}
+nav#menu ul li a:hover {
+  color: rgb(25.4560669456, 96.1673640167, 143.5439330544);
+}
+
+/* EXERCICI 4 - GENERACIÓ DE DEGRADATS AMB CONDICIONAL (1,75 punts)
+Creeu un bucle que generi 10 classes, de .gradient-1 a .gradient-10.
+Cada degradat comença amb el color inicial pur i acaba amb una mescla
+del color inicial i del color final:
+- Classe 1: la mescla té un 10 % del color inicial i un 90 % del color final.
+- Classe 2: un 20 % del color inicial i un 80 % del color final.
+- I així successivament fins a la classe 10 (100 % del color inicial i 0 % del final),
+  que, per tant, queda d'un sol color.
+El tipus de degradat depèn de si el número de classe és senar o parell:
+- Senar: degradat lineal (to right), color inicial $taronja i color final $blau.
+- Parell: degradat radial, color inicial $blau i color final $taronja.
+Pista: mix($color1, $color2, $pes) retorna una mescla amb un $pes de $color1
+(també podeu fer servir color.mix() del mòdul sass:color).
+*/
+.gradient-1 {
+  /* Senar: degradat lineal */
+  background: linear-gradient(to right, #FF5733, rgb(72.3, 145.5, 202.2));
+}
+
+.gradient-2 {
+  /* Parell: degradat radial */
+  background: radial-gradient(#3498db, rgb(214.4, 100, 84.6));
+}
+
+.gradient-3 {
+  /* Senar: degradat lineal */
+  background: linear-gradient(to right, #FF5733, rgb(112.9, 132.5, 168.6));
+}
+
+.gradient-4 {
+  /* Parell: degradat radial */
+  background: radial-gradient(#3498db, rgb(173.8, 113, 118.2));
+}
+
+.gradient-5 {
+  /* Senar: degradat lineal */
+  background: linear-gradient(to right, #FF5733, rgb(153.5, 119.5, 135));
+}
+
+.gradient-6 {
+  /* Parell: degradat radial */
+  background: radial-gradient(#3498db, rgb(133.2, 126, 151.8));
+}
+
+.gradient-7 {
+  /* Senar: degradat lineal */
+  background: linear-gradient(to right, #FF5733, rgb(194.1, 106.5, 101.4));
+}
+
+.gradient-8 {
+  /* Parell: degradat radial */
+  background: radial-gradient(#3498db, rgb(92.6, 139, 185.4));
+}
+
+.gradient-9 {
+  /* Senar: degradat lineal */
+  background: linear-gradient(to right, #FF5733, rgb(234.7, 93.5, 67.8));
+}
+
+.gradient-10 {
+  /* Parell: degradat radial */
+  background: radial-gradient(#3498db, #3498db);
+}
+
+/* EXERCICI 5 - GENERACIÓ DINÀMICA DE BOTONS (1,25 punts)
+Creeu un mapa amb quatre tipus de botó: primary, secondary, success i danger.
+Per a cada tipus, el mapa ha de guardar el color de fons, el color del text,
+el gruix de la vora i el color de la vora.
+Recorreu el mapa per generar una classe .btn-<tipus> per a cada botó.
+Totes les classes comparteixen la resta de propietats (padding, border-radius...).
+En passar el ratolí per sobre (:hover):
+- Si el tipus és "danger", s'aplica l'animació pulse.
+- Per a la resta de tipus, el color de fons s'enfosqueix un 10 %.
+L'animació pulse va del color de fons del botó danger al color de la seva vora.
+*/
+.btn-primary {
+  background-color: #3498db;
+  color: #ffffff;
+  border: 2px solid #2980b9;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: #ffffff;
+  border: 2px solid #7f8c8d;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-secondary:hover {
+  background-color: rgb(121.2769230769, 141.4615384615, 142.7230769231);
+}
+
+.btn-success {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: 2px solid #27ae60;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-success:hover {
+  background-color: rgb(36.616, 162.384, 89.948);
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: 2px solid #c0392b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-danger:hover {
+  animation: pulse 1s infinite alternate;
+}
+
+/* Animació per al botó "danger" */
+@keyframes pulse {
+  from {
+    background-color: #e74c3c;
+  }
+  to {
+    background-color: #c0392b;
+  }
+}
+/* EXERCICI 6 - ORGANITZACIÓ EN ARXIUS (1 punt) -> NOMÉS  PUNTUARÀ SI ELS ANTERIORS 5 EXERCICIS ESTAN CORRECTES.
+Organitzeu el codi SASS en 3 arxius:
+  - main.scss: l'arxiu principal, que NOMÉS importa els dos parcials.
+  - _styles.scss: les variables i el mixin.
+  - _layouts.scss: la resta del codi.
+*/
